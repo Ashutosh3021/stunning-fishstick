@@ -2,18 +2,8 @@
   "version": 2,
   "rewrites": [
     {
-      "source": "/api/(.*)",
-      "destination": "/server.js"
-    }
-  ],
-  "builds": [
-    {
-      "src": "server.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "public/**",
-      "use": "@vercel/static"
+      "source": "/api/chat",
+      "destination": "/api/chat.js"
     }
   ],
   "outputDirectory": "public"
