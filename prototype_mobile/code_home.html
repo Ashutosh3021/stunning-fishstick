@@ -2,7 +2,13 @@
 
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport"/>
+<script src="routing.js"></script>
+<!-- 2.3 Preload hints for critical assets -->
+<link rel="preload" href="style.css" as="style">
+<link rel="preload" href="app.js" as="script">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" as="style">
+<title>CareConnect | Mobile Home</title>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -208,7 +214,13 @@
 
 <!-- Visual Anchor Image -->
 <section class="rounded-[2.5rem] overflow-hidden h-64 shadow-xl">
-<img alt="Healthcare support" class="w-full h-full object-cover" data-alt="Modern clean hospital interior with soft natural lighting and a friendly nurse talking to an elderly patient in a comfortable setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC72062afw0qvl_CE5dFhBYF8SdD7vKwERKTRNme1LL-AOSX1B5GMOgujcZQr2HyTkYIxgvmWx_HoFTdmB34Ntx9Z7WGwwieuysmJaB-lZbUtPMxEAtrftuA-HmTk6TeqxNK2gyNV_SaW7X4OKXx2xbv1H770BdCgonNkQ3muU2q0zf7f48_PAQJtYz50VtNoe5HF_GggjXa5eqsNaCGW-qHIzXezaDDmdIE_akBItTAPQGZYq2mxVuzMxP3GaNcGr4mnGsfRzzP6Q"/>
+<img alt="Healthcare support" 
+     class="w-full h-full object-cover" 
+     data-alt="Modern clean hospital interior with soft natural lighting and a friendly nurse talking to an elderly patient in a comfortable setting" 
+     loading="lazy"
+     src="https://lh3.googleusercontent.com/aida-public/AB6AXuC72062afw0qvl_CE5dFhBYF8SdD7vKwERKTRNme1LL-AOSX1B5GMOgujcZQr2HyTkYIxgvmWx_HoFTdmB34Ntx9Z7WGwwieuysmJaB-lZbUtPMxEAtrftuA-HmTk6TeqxNK2gyNV_SaW7X4OKXx2xbv1H770BdCgonNkQ3muU2q0zf7f48_PAQJtYz50VtNoe5HF_GggjXa5eqsNaCGW-qHIzXezaDDmdIE_akBItTAPQGZYq2mxVuzMxP3GaNcGr4mnGsfRzzP6Q"
+     srcset="https://lh3.googleusercontent.com/aida-public/AB6AXuC72062afw0qvl_CE5dFhBYF8SdD7vKwERKTRNme1LL-AOSX1B5GMOgujcZQr2HyTkYIxgvmWx_HoFTdmB34Ntx9Z7WGwwieuysmJaB-lZbUtPMxEAtrftuA-HmTk6TeqxNK2gyNV_SaW7X4OKXx2xbv1H770BdCgonNkQ3muU2q0zf7f48_PAQJtYz50VtNoe5HF_GggjXa5eqsNaCGW-qHIzXezaDDmdIE_akBItTAPQGZYq2mxVuzMxP3GaNcGr4mnGsfRzzP6Q 1000w"
+     sizes="(max-width: 768px) 100vw, 50vw"/>
 </section>
 
 <!-- Story CTA -->

@@ -2,17 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>CareConnect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="routing.js"></script>
+  <title>CareConnect | Desktop Redirect</title>
 </head>
 <body>
   <script>
-    (function () {
-      var isMobile = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
-      var target = isMobile ? '../prototype_mobile/code_home.html' : 'code_landing.html';
-      // Silent bootstrap: no redirect text, just replace the current document.
-      window.location.replace(target);
-    })();
+    // Fallback if routing.js fails to redirect
+    window.location.replace('code_landing.html');
   </script>
 </body>
 </html>
