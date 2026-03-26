@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>CareConnect</title>
+</head>
+<body>
+  <script>
+    (function () {
+      var isMobile = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+      // Netlify entry point: pick the correct storyboard at runtime.
+      var target = isMobile ? 'prototype_mobile/code_home.html' : 'prototype_desktop/code_landing.html';
+      window.location.replace(target);
+    })();
+  </script>
+</body>
+</html>
+

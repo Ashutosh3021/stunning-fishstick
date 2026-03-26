@@ -1,0 +1,71 @@
+/* Custom styles layered on top of Tailwind CDN classes.
+   The prototypes mainly use Tailwind utilities; this file centralizes our app-specific UI tweaks. */
+
+:root{
+  --cc-primary:#00685f;
+  --cc-primary-container:#008378;
+  --cc-surface:#f8f9fb;
+  --cc-on-surface:#191c1e;
+  --cc-outline-variant:#bcc9c6;
+}
+
+html, body{
+  height:100%;
+}
+
+body{
+  margin:0;
+  background:var(--cc-surface);
+  color:var(--cc-on-surface);
+}
+
+.cc-glass{
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(248, 249, 251, 0.8);
+}
+
+/* Simple utility for JS to toggle visibility even if Tailwind is not loaded. */
+.cc-hidden{
+  display:none !important;
+}
+
+.cc-toast{
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 9999;
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 12px;
+  padding: 12px 14px;
+  box-shadow: 0 12px 32px -4px rgba(25,28,30,0.12);
+  max-width: 520px;
+}
+
+.cc-toast-title{
+  font-weight: 800;
+  margin:0 0 4px 0;
+}
+
+.cc-toast-body{
+  margin:0;
+  font-size: 13px;
+  color: rgba(25,28,30,0.8);
+}
+
+/* Shared form control styling (matches prototype look) */
+.form-input-styled {
+  background-color: #e7e8ea;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.form-input-styled:focus {
+  background-color: #ffffff;
+  outline: 2px solid rgba(0, 104, 95, 0.2);
+}
+

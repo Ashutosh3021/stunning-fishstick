@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CareConnect | Volunteer Registration</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary": "#575e70",
+              "tertiary-container": "#00855b",
+              "on-tertiary": "#ffffff",
+              "surface-bright": "#f8f9fb",
+              "on-error": "#ffffff",
+              "on-primary-fixed-variant": "#005049",
+              "on-secondary-fixed": "#141b2b",
+              "inverse-surface": "#2e3132",
+              "outline": "#6d7a77",
+              "surface-container-low": "#f3f4f6",
+              "surface-container": "#edeef0",
+              "surface-variant": "#e1e2e4",
+              "on-primary-fixed": "#00201d",
+              "primary-container": "#008378",
+              "error-container": "#ffdad6",
+              "tertiary": "#006947",
+              "tertiary-fixed-dim": "#4edea3",
+              "error": "#ba1a1a",
+              "on-secondary-container": "#5c6274",
+              "on-tertiary-fixed": "#002113",
+              "outline-variant": "#bcc9c6",
+              "on-primary": "#ffffff",
+              "secondary-fixed-dim": "#c0c6db",
+              "inverse-on-surface": "#f0f1f3",
+              "inverse-primary": "#6bd8cb",
+              "tertiary-fixed": "#6ffbbe",
+              "on-error-container": "#93000a",
+              "on-background": "#191c1e",
+              "background": "#f8f9fb",
+              "on-surface-variant": "#3d4947",
+              "surface-tint": "#006a61",
+              "secondary-fixed": "#dce2f7",
+              "surface-container-highest": "#e1e2e4",
+              "surface": "#f8f9fb",
+              "on-tertiary-container": "#f5fff6",
+              "on-secondary-fixed-variant": "#404758",
+              "secondary-container": "#d9dff5",
+              "surface-dim": "#d9dadc",
+              "on-secondary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed-variant": "#005236",
+              "surface-container-high": "#e7e8ea",
+              "primary-fixed-dim": "#6bd8cb",
+              "primary-fixed": "#89f5e7",
+              "primary": "#00685f",
+              "on-primary-container": "#f4fffc",
+              "on-surface": "#191c1e"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col bg-surface text-on-surface font-body antialiased">
+
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none h-20">
+  <div class="flex justify-between items-center px-8 h-full max-w-screen-2xl mx-auto">
+    <div class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-50 font-headline">CareConnect</div>
+    <div class="hidden md:flex items-center gap-8">
+      <a class="text-slate-600 dark:text-slate-400 hover:text-teal-600 transition-colors font-manrope text-sm font-medium tracking-tight py-1" href="code_landing.html">Home</a>
+      <a class="text-teal-600 dark:text-teal-400 font-semibold border-b-2 border-teal-600 font-manrope text-sm tracking-tight py-1" href="code_form1.html">Get Support</a>
+      <a class="text-teal-600 dark:text-teal-400 font-semibold border-b-2 border-teal-600 font-manrope text-sm tracking-tight py-1" href="code_volunteer_desktop.html">Volunteer</a>
+      <a class="text-slate-600 dark:text-slate-400 hover:text-teal-600 transition-colors font-manrope text-sm font-medium tracking-tight py-1" href="code_contact_desktop.html">Contact</a>
+      <a class="text-slate-600 dark:text-slate-400 hover:text-teal-600 transition-colors font-manrope text-sm font-medium tracking-tight py-1" href="code_faq.html">FAQ</a>
+    </div>
+    <a class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-semibold transition-transform scale-95 active:opacity-80 text-center" href="code_dashbord.html">Dashboard</a>
+  </div>
+</nav>
+
+<main class="flex-grow pt-32 pb-24 px-6 md:px-12">
+  <div class="max-w-5xl mx-auto">
+    <div class="mb-12">
+      <span class="text-tertiary-container font-semibold tracking-wider text-xs uppercase mb-2 block">Volunteer Registration</span>
+      <h1 class="font-headline text-4xl md:text-5xl font-extrabold text-on-surface tracking-tight mb-4">Make a real difference in healthcare.</h1>
+      <p class="text-secondary text-lg max-w-3xl">Complete the form below and we will review your application. After verification, we will follow up with scheduling and next steps.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+      <div class="lg:col-span-8 bg-surface-container-lowest rounded-[2rem] p-8 shadow-[0_12px_32px_-4px_rgba(25,28,30,0.06)] border border-outline-variant/10">
+        <form id="volunteerForm" class="space-y-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label class="block text-xs font-bold text-outline uppercase tracking-widest mb-2 px-1">Full Name</label>
+              <input id="volunteerFullname" class="form-input-styled" placeholder="e.g. Sarah Jenkins" type="text" name="volunteerFullname"/>
+            </div>
+            <div class="space-y-2">
+              <label class="block text-xs font-bold text-outline uppercase tracking-widest mb-2 px-1">Email Address</label>
+              <input id="volunteerEmail" class="form-input-styled" placeholder="sarah@example.com" type="email" name="volunteerEmail"/>
+            </div>
+            <div class="space-y-2">
+              <label class="block text-xs font-bold text-outline uppercase tracking-widest mb-2 px-1">Phone Number</label>
+              <input id="volunteerPhone" class="form-input-styled" placeholder="+1 (555) 000-0000" type="tel" name="volunteerPhone"/>
+            </div>
+            <div class="space-y-2">
+              <label class="block text-xs font-bold text-outline uppercase tracking-widest mb-2 px-1">City</label>
+              <input id="volunteerCity" class="form-input-styled" placeholder="Select City" type="text" name="volunteerCity"/>
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <label class="block text-xs font-bold text-outline uppercase tracking-widest mb-2 px-1">Profession</label>
+            <div class="relative">
+              <select id="volunteerProfession" class="form-input-styled appearance-none" name="volunteerProfession">
+                <option value="">Select your expertise</option>
+                <option value="doctor">Doctor</option>
+                <option value="nurse">Nurse</option>
+                <option value="counselor">Counselor</option>
+                <option value="logistics">Logistics</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="space-y-3 pt-2">
+            <label class="block text-xs font-bold text-outline uppercase tracking-widest mb-2 px-1">Primary Availability</label>
+            <div class="flex flex-wrap gap-3">
+              <label class="cursor-pointer">
+                <input class="hidden peer" type="checkbox" name="availability" value="weekdays"/>
+                <div class="px-6 py-3 rounded-full bg-surface-container border border-outline-variant/20 peer-checked:bg-primary peer-checked:text-white transition-all flex items-center gap-2">
+                  <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">calendar_today</span>
+                  <span class="font-semibold text-sm">Weekdays</span>
+                </div>
+              </label>
+              <label class="cursor-pointer">
+                <input class="hidden peer" type="checkbox" name="availability" value="weekends" checked/>
+                <div class="px-6 py-3 rounded-full bg-surface-container border border-outline-variant/20 peer-checked:bg-primary peer-checked:text-white transition-all flex items-center gap-2">
+                  <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">event</span>
+                  <span class="font-semibold text-sm">Weekends</span>
+                </div>
+              </label>
+              <label class="cursor-pointer">
+                <input class="hidden peer" type="checkbox" name="availability" value="emergency"/>
+                <div class="px-6 py-3 rounded-full bg-surface-container border border-outline-variant/20 peer-checked:bg-tertiary peer-checked:text-white transition-all flex items-center gap-2">
+                  <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">emergency</span>
+                  <span class="font-semibold text-sm">Emergency</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <label class="block text-xs font-bold text-outline uppercase tracking-widest mb-2 px-1">Short Bio</label>
+            <textarea id="volunteerBio" class="w-full form-input-styled resize-none" placeholder="Tell us about your experience and why you want to join..." rows="5" name="volunteerBio"></textarea>
+          </div>
+
+          <button class="w-full bg-gradient-to-br from-primary to-primary-container text-white font-headline font-bold text-lg py-5 rounded-full shadow-lg shadow-primary/20 active:scale-95 transition-all duration-200 flex justify-center items-center gap-2" type="submit">
+            Register Now
+            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+          </button>
+
+          <p class="text-center text-on-surface-variant text-xs font-medium px-4 leading-relaxed">
+            By registering, you agree to CareConnect's volunteer terms of service and safety protocols.
+          </p>
+        </form>
+      </div>
+
+      <div class="lg:col-span-4 hidden lg:block">
+        <div class="bg-surface-container-low rounded-[2rem] p-8">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tertiary-container/10 text-tertiary mb-6">
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+            <span class="text-xs font-bold uppercase tracking-wider">Trusted Support</span>
+          </div>
+          <h2 class="text-3xl font-bold mb-4">Your care matters.</h2>
+          <p class="text-secondary leading-relaxed mb-6">We match volunteers based on skills, city, and availability—so you can focus on helping, not paperwork.</p>
+          <ul class="space-y-4">
+            <li class="flex items-center gap-3 text-on-surface font-medium">
+              <span class="material-symbols-outlined text-primary">check_circle</span>
+              Response within 48 hours
+            </li>
+            <li class="flex items-center gap-3 text-on-surface font-medium">
+              <span class="material-symbols-outlined text-primary">check_circle</span>
+              Clear onboarding checklist
+            </li>
+            <li class="flex items-center gap-3 text-on-surface font-medium">
+              <span class="material-symbols-outlined text-primary">check_circle</span>
+              Safety-first training
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="w-full py-16 px-8 mt-auto bg-slate-100 dark:bg-slate-950 font-inter text-sm leading-relaxed">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-screen-2xl mx-auto">
+    <div class="space-y-4">
+      <div class="text-xl font-bold text-slate-900 dark:text-slate-50 font-headline">CareConnect</div>
+      <p class="text-slate-500 dark:text-slate-400">Human-centric care for everyone. Bridging communities through compassion and technology.</p>
+    </div>
+    <div>
+      <h4 class="font-bold text-slate-900 dark:text-slate-50 mb-6 uppercase tracking-wider text-xs">Resources</h4>
+      <div class="flex flex-col gap-3">
+        <a class="text-slate-500 dark:text-slate-400 hover:text-teal-600 transition-colors" href="code_faq.html">Privacy Policy</a>
+        <a class="text-slate-500 dark:text-slate-400 hover:text-teal-600 transition-colors" href="code_faq.html">Terms of Service</a>
+      </div>
+    </div>
+    <div>
+      <h4 class="font-bold text-slate-900 dark:text-slate-50 mb-6 uppercase tracking-wider text-xs">Navigation</h4>
+      <div class="flex flex-col gap-3">
+        <a class="text-slate-500 dark:text-slate-400 hover:text-teal-600 transition-colors" href="code_landing.html">Home</a>
+        <a class="text-teal-600 font-medium" href="code_form1.html">Get Support</a>
+        <a class="text-slate-500 dark:text-slate-400 hover:text-teal-600 transition-colors" href="code_volunteer_desktop.html">Volunteer</a>
+      </div>
+    </div>
+    <div>
+      <h4 class="font-bold text-slate-900 dark:text-slate-50 mb-6 uppercase tracking-wider text-xs">Connect</h4>
+      <div class="flex gap-4">
+        <span class="material-symbols-outlined text-slate-500 hover:text-teal-600 cursor-pointer transition-colors">public</span>
+        <span class="material-symbols-outlined text-slate-500 hover:text-teal-600 cursor-pointer transition-colors">mail</span>
+        <span class="material-symbols-outlined text-slate-500 hover:text-teal-600 cursor-pointer transition-colors">share</span>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-screen-2xl mx-auto border-t border-slate-200 dark:border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-400">
+    <p>© 2025 CareConnect NGO. Human-centric care for everyone.</p>
+    <div class="flex gap-6">
+      <span>Privacy Policy</span>
+      <span>Terms of Service</span>
+      <span>Accessibility</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body></html>
+

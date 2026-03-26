@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-surface": "#2e3132",
+              "outline": "#6d7a77",
+              "on-surface-variant": "#3d4947",
+              "primary-container": "#008378",
+              "on-error": "#ffffff",
+              "on-primary-fixed": "#00201d",
+              "secondary": "#3f6560",
+              "secondary-fixed-dim": "#a6cfc8",
+              "inverse-primary": "#6bd8cb",
+              "surface-container-lowest": "#ffffff",
+              "surface": "#f8f9fb",
+              "on-primary-fixed-variant": "#005049",
+              "on-primary-container": "#f4fffc",
+              "surface-container": "#edeef0",
+              "secondary-fixed": "#c2ebe3",
+              "primary-fixed-dim": "#6bd8cb",
+              "tertiary-container": "#b05e3d",
+              "surface-container-low": "#f3f4f6",
+              "surface-dim": "#d9dadc",
+              "on-tertiary-fixed": "#370e00",
+              "surface-tint": "#006a61",
+              "on-error-container": "#93000a",
+              "on-secondary": "#ffffff",
+              "on-background": "#191c1e",
+              "secondary-container": "#c2ebe3",
+              "surface-container-highest": "#e1e2e4",
+              "on-secondary-fixed": "#00201d",
+              "on-secondary-container": "#456b66",
+              "surface-bright": "#f8f9fb",
+              "inverse-on-surface": "#f0f1f3",
+              "on-tertiary-container": "#fffbff",
+              "on-secondary-fixed-variant": "#274d48",
+              "on-primary": "#ffffff",
+              "primary": "#00685f",
+              "surface-container-high": "#e7e8ea",
+              "error-container": "#ffdad6",
+              "error": "#ba1a1a",
+              "primary-fixed": "#89f5e7",
+              "outline-variant": "#bcc9c6",
+              "background": "#f8f9fb",
+              "tertiary": "#924628",
+              "tertiary-fixed-dim": "#ffb59a",
+              "on-tertiary-fixed-variant": "#773215",
+              "on-surface": "#191c1e",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed": "#ffdbce",
+              "surface-variant": "#e1e2e4"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-background font-body antialiased">
+<!-- TopAppBar Execution -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-[#f8f9fb] dark:bg-slate-900">
+<button class="text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors p-2 rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-manrope font-bold text-2xl tracking-tighter text-[#0D9488] dark:text-[#2dd4bf] italic font-extrabold">
+            CareConnect
+        </h1>
+<button class="text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors p-2 rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<div class="absolute bottom-0 left-0 w-full h-px bg-[#f3f4f6] dark:bg-slate-800"></div>
+</header>
+<main class="pt-20 pb-32 px-6 max-w-2xl mx-auto space-y-8">
+<!-- Hero Section: The Editorial Sanctuary -->
+<section class="relative overflow-hidden rounded-[2rem] bg-surface-container-lowest p-8 shadow-[0_8px_24px_rgba(25,28,30,0.04)]">
+<div class="relative z-10">
+<h2 class="font-headline font-extrabold text-4xl leading-tight tracking-tight text-on-surface mb-4">
+                    Healthcare Support, When You Need It Most
+                </h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-8 max-w-md">
+                    We are here to help patients in need of medical, mental health, and home care services.
+                </p>
+<div class="flex flex-col gap-4">
+<a class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold py-4 px-8 rounded-full shadow-lg shadow-primary/10 active:scale-95 transition-transform text-center" href="code_psf.html">Request Support</a>
+<a class="w-full border-2 border-primary text-primary font-bold py-4 px-8 rounded-full active:scale-95 transition-transform text-center bg-transparent" href="code_vrf.html">Become a Volunteer</a>
+</div>
+</div>
+<!-- Abstract background element -->
+<div class="absolute -right-16 -top-16 w-64 h-64 bg-secondary-fixed opacity-20 rounded-full blur-3xl"></div>
+</section>
+<!-- Stats Bento-lite Row -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Card 1 -->
+<div class="bg-surface-container-low p-6 rounded-2xl flex flex-col items-center text-center space-y-3 transition-all hover:bg-surface-container-high">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="diversity_3">diversity_3</span>
+</div>
+<div class="space-y-1">
+<span class="block font-headline font-extrabold text-2xl text-on-surface">1,200+</span>
+<span class="block font-label text-[10px] uppercase tracking-widest text-on-surface-variant font-semibold">Patients Helped</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low p-6 rounded-2xl flex flex-col items-center text-center space-y-3 transition-all hover:bg-surface-container-high">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="volunteer_activism">volunteer_activism</span>
+</div>
+<div class="space-y-1">
+<span class="block font-headline font-extrabold text-2xl text-on-surface">450+</span>
+<span class="block font-label text-[10px] uppercase tracking-widest text-on-surface-variant font-semibold">Volunteers</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low p-6 rounded-2xl flex flex-col items-center text-center space-y-3 transition-all hover:bg-surface-container-high">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="location_city">location_city</span>
+</div>
+<div class="space-y-1">
+<span class="block font-headline font-extrabold text-2xl text-on-surface">12</span>
+<span class="block font-label text-[10px] uppercase tracking-widest text-on-surface-variant font-semibold">Cities Covered</span>
+</div>
+</div>
+</section>
+<!-- Story Section: Streamlined Care Process -->
+<section class="space-y-6">
+  <div class="space-y-2">
+    <span class="font-label text-xs font-semibold uppercase tracking-widest text-on-surface-variant">Streamlined Care Process</span>
+    <h3 class="font-headline font-extrabold text-2xl text-on-surface tracking-tight">From need to support, without the stress</h3>
+    <p class="text-on-surface-variant text-sm leading-relaxed max-w-md">A calm, guided path that connects you with trusted help—step by step.</p>
+  </div>
+
+  <div class="grid grid-cols-1 gap-4">
+    <div class="bg-surface-container-lowest rounded-[1.5rem] p-6 shadow-[0_8px_24px_rgba(25,28,30,0.04)]">
+      <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-4">
+        <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 0;">description</span>
+      </div>
+      <h4 class="font-headline font-bold text-lg text-on-surface mb-2">1) Tell us what you need</h4>
+      <p class="text-on-surface-variant text-sm leading-relaxed">Share details about medical support, mental health, or home care—securely.</p>
+    </div>
+
+    <div class="bg-surface-container-lowest rounded-[1.5rem] p-6 shadow-[0_8px_24px_rgba(25,28,30,0.04)]">
+      <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-4">
+        <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 0;">handshake</span>
+      </div>
+      <h4 class="font-headline font-bold text-lg text-on-surface mb-2">2) Get matched with care</h4>
+      <p class="text-on-surface-variant text-sm leading-relaxed">We connect you with verified volunteers in your community.</p>
+    </div>
+
+    <div class="bg-surface-container-lowest rounded-[1.5rem] p-6 shadow-[0_8px_24px_rgba(25,28,30,0.04)]">
+      <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-4">
+        <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 0;">volunteer_activism</span>
+      </div>
+      <h4 class="font-headline font-bold text-lg text-on-surface mb-2">3) Receive support with dignity</h4>
+      <p class="text-on-surface-variant text-sm leading-relaxed">From appointments to daily assistance, you’re never alone.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Story Section: Our Impact -->
+<section class="space-y-5">
+  <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-tertiary-container/10 text-tertiary">
+    <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+    <span class="font-label text-xs font-bold uppercase tracking-widest">Our Impact</span>
+  </div>
+  <h3 class="font-headline font-extrabold text-2xl text-on-surface tracking-tight">Beyond treatment, we build community</h3>
+  <ul class="space-y-3">
+    <li class="flex items-center gap-3 text-on-surface font-medium">
+      <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+      <span>100% background-checked volunteers</span>
+    </li>
+    <li class="flex items-center gap-3 text-on-surface font-medium">
+      <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+      <span>24/7 support coordination</span>
+    </li>
+    <li class="flex items-center gap-3 text-on-surface font-medium">
+      <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+      <span>Free access for patients who need it</span>
+    </li>
+  </ul>
+</section>
+
+<!-- Visual Anchor Image -->
+<section class="rounded-[2.5rem] overflow-hidden h-64 shadow-xl">
+<img alt="Healthcare support" class="w-full h-full object-cover" data-alt="Modern clean hospital interior with soft natural lighting and a friendly nurse talking to an elderly patient in a comfortable setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC72062afw0qvl_CE5dFhBYF8SdD7vKwERKTRNme1LL-AOSX1B5GMOgujcZQr2HyTkYIxgvmWx_HoFTdmB34Ntx9Z7WGwwieuysmJaB-lZbUtPMxEAtrftuA-HmTk6TeqxNK2gyNV_SaW7X4OKXx2xbv1H770BdCgonNkQ3muU2q0zf7f48_PAQJtYz50VtNoe5HF_GggjXa5eqsNaCGW-qHIzXezaDDmdIE_akBItTAPQGZYq2mxVuzMxP3GaNcGr4mnGsfRzzP6Q"/>
+</section>
+
+<!-- Story CTA -->
+<section class="bg-primary rounded-[2rem] px-6 py-8 text-center relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-0 right-0 w-40 h-40 bg-white rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-40 h-40 bg-tertiary-fixed rounded-full blur-3xl"></div>
+  </div>
+  <div class="relative z-10 space-y-5">
+    <h3 class="font-headline font-extrabold text-2xl text-on-primary tracking-tight leading-tight">Ready to make a difference or need a helping hand?</h3>
+    <div class="flex flex-col gap-4">
+      <a class="w-full bg-white text-primary font-bold py-4 px-6 rounded-full shadow-xl active:scale-95 transition-transform" href="code_psf.html">Start Here</a>
+    </div>
+  </div>
+</section>
+</main>
+<!-- BottomNavBar Execution -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-950/80 backdrop-blur-lg rounded-t-3xl shadow-[0_-8px_24px_rgba(25,28,30,0.06)]">
+<!-- Active: Home -->
+<a class="flex flex-col items-center justify-center bg-[#c2ebe3] dark:bg-[#004d46] text-[#00685f] dark:text-[#89f5e7] rounded-2xl px-5 py-2 active:scale-90 transition-transform" href="code_home.html">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-plus-jakarta-sans text-[10px] font-semibold uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-[#0D9488] dark:hover:text-[#2dd4bf] active:scale-90 transition-transform" href="code_psf.html">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-plus-jakarta-sans text-[10px] font-semibold uppercase tracking-widest mt-1">Forms</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-[#0D9488] dark:hover:text-[#2dd4bf] active:scale-90 transition-transform" href="code_chatbot.html">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+<span class="font-plus-jakarta-sans text-[10px] font-semibold uppercase tracking-widest mt-1">Chat</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-[#0D9488] dark:hover:text-[#2dd4bf] active:scale-90 transition-transform" href="code_impact.html">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-plus-jakarta-sans text-[10px] font-semibold uppercase tracking-widest mt-1">Dashboard</span>
+</a>
+</nav>
+<script src="app.js" defer></script>
+</body></html>

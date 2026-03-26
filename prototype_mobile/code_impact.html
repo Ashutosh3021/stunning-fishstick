@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Impact Overview - CareConnect</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-surface": "#2e3132",
+              "outline": "#6d7a77",
+              "on-surface-variant": "#3d4947",
+              "primary-container": "#008378",
+              "on-error": "#ffffff",
+              "on-primary-fixed": "#00201d",
+              "secondary": "#3f6560",
+              "secondary-fixed-dim": "#a6cfc8",
+              "inverse-primary": "#6bd8cb",
+              "surface-container-lowest": "#ffffff",
+              "surface": "#f8f9fb",
+              "on-primary-fixed-variant": "#005049",
+              "on-primary-container": "#f4fffc",
+              "surface-container": "#edeef0",
+              "secondary-fixed": "#c2ebe3",
+              "primary-fixed-dim": "#6bd8cb",
+              "tertiary-container": "#b05e3d",
+              "surface-container-low": "#f3f4f6",
+              "surface-dim": "#d9dadc",
+              "on-tertiary-fixed": "#370e00",
+              "surface-tint": "#006a61",
+              "on-error-container": "#93000a",
+              "on-secondary": "#ffffff",
+              "on-background": "#191c1e",
+              "secondary-container": "#c2ebe3",
+              "surface-container-highest": "#e1e2e4",
+              "on-secondary-fixed": "#00201d",
+              "on-secondary-container": "#456b66",
+              "surface-bright": "#f8f9fb",
+              "inverse-on-surface": "#f0f1f3",
+              "on-tertiary-container": "#fffbff",
+              "on-secondary-fixed-variant": "#274d48",
+              "on-primary": "#ffffff",
+              "primary": "#00685f",
+              "surface-container-high": "#e7e8ea",
+              "error-container": "#ffdad6",
+              "error": "#ba1a1a",
+              "primary-fixed": "#89f5e7",
+              "outline-variant": "#bcc9c6",
+              "background": "#f8f9fb",
+              "tertiary": "#924628",
+              "tertiary-fixed-dim": "#ffb59a",
+              "on-tertiary-fixed-variant": "#773215",
+              "on-surface": "#191c1e",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed": "#ffdbce",
+              "surface-variant": "#e1e2e4"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-[#f8f9fb] dark:bg-slate-900">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-slate-600 dark:text-slate-400 p-2 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-full">menu</button>
+<h1 class="font-manrope font-bold text-2xl tracking-tighter text-[#0D9488] dark:text-[#2dd4bf]">CareConnect</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="material-symbols-outlined text-slate-600 dark:text-slate-400 p-2 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-full">favorite</button>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Close-up professional portrait of a smiling male medical volunteer in a clean lit environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnn9o3BYeh9Bbt4D4w9eSvdcC_ZNHyiUkECtwozkku5t6MWalrBPRa_I9P-TVz7otdiito6vuTGLezifSmiZtZkFrO8yRRIjghBwQ_ui5gzzMCUTXdEdamLL70gcZA_lt5AlKWvaqU_ARHTlkD9EhBKJ61-DPAYVHaknqJxgllUbmhXvGiywdDyixGatyFbs97cc-yxI6EgIvp-uSH0-wD8G47zfYVjWln-t3z-QEUFcyKoCvxkGl5dbTF8xq9Lx-nWbSNYkTtDrQ"/>
+</div>
+</div>
+</header>
+<!-- Content Separation Logic -->
+<div class="mt-16 bg-[#f3f4f6] dark:bg-slate-800 h-px w-full"></div>
+<main class="max-w-7xl mx-auto px-6 pt-8 space-y-8">
+<!-- Header Section -->
+<section class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div class="space-y-1">
+<span class="font-label text-xs font-semibold uppercase tracking-widest text-on-surface-variant">Analytics Dashboard</span>
+<h2 class="font-headline font-extrabold text-4xl text-on-surface tracking-tight">Impact Overview</h2>
+</div>
+<div class="flex gap-3">
+<button class="px-5 py-2.5 rounded-full bg-surface-container-lowest border border-outline-variant/20 shadow-sm font-label text-sm font-semibold flex items-center gap-2 hover:bg-surface transition-colors">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+                    Last 30 Days
+                </button>
+<button class="px-5 py-2.5 rounded-full bg-primary text-on-primary font-label text-sm font-semibold flex items-center gap-2 hover:opacity-90 active:scale-95 transition-all shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-sm">download</span>
+                    Export Report
+                </button>
+</div>
+</section>
+<!-- Bento Grid: Stats -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Stat Card 1 -->
+<div class="bg-surface-container-low rounded-xl p-6 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 -mr-8 -mt-8 bg-primary/5 rounded-full transition-transform group-hover:scale-125 duration-500"></div>
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">analytics</span>
+</div>
+<div>
+<p class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant">Total Requests</p>
+<h3 id="kpiTotalRequests" class="font-headline text-3xl font-extrabold text-primary">2,842</h3>
+</div>
+</div>
+<div class="flex items-center gap-2 text-xs font-semibold text-primary">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+12.5% from last month</span>
+</div>
+</div>
+<!-- Stat Card 2 -->
+<div class="bg-surface-container-low rounded-xl p-6 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 -mr-8 -mt-8 bg-[#2e7d32]/5 rounded-full transition-transform group-hover:scale-125 duration-500"></div>
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded-2xl bg-[#e8f5e9] flex items-center justify-center">
+<span class="material-symbols-outlined text-[#2e7d32]">volunteer_activism</span>
+</div>
+<div>
+<p class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant">Active Volunteers</p>
+<h3 id="kpiActiveVolunteers" class="font-headline text-3xl font-extrabold text-[#2e7d32]">856</h3>
+</div>
+</div>
+<div class="flex items-center gap-2 text-xs font-semibold text-[#2e7d32]">
+<span class="material-symbols-outlined text-sm">person_add</span>
+<span>42 new this week</span>
+</div>
+</div>
+<!-- Stat Card 3 -->
+<div class="bg-surface-container-low rounded-xl p-6 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 -mr-8 -mt-8 bg-[#ed6c02]/5 rounded-full transition-transform group-hover:scale-125 duration-500"></div>
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded-2xl bg-[#fff3e0] flex items-center justify-center">
+<span class="material-symbols-outlined text-[#ed6c02]">pending_actions</span>
+</div>
+<div>
+<p class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant">Pending Cases</p>
+<h3 id="kpiPendingCases" class="font-headline text-3xl font-extrabold text-[#ed6c02]">124</h3>
+</div>
+</div>
+<div class="flex items-center gap-2 text-xs font-semibold text-[#ed6c02]">
+<span class="material-symbols-outlined text-sm">priority_high</span>
+<span>8 urgent cases active</span>
+</div>
+</div>
+<!-- Stat Card 4 -->
+<div class="bg-surface-container-low rounded-xl p-6 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 -mr-8 -mt-8 bg-[#0288d1]/5 rounded-full transition-transform group-hover:scale-125 duration-500"></div>
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded-2xl bg-[#e1f5fe] flex items-center justify-center">
+<span class="material-symbols-outlined text-[#0288d1]">location_city</span>
+</div>
+<div>
+<p class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant">Cities Reached</p>
+<h3 id="kpiCitiesReached" class="font-headline text-3xl font-extrabold text-[#0288d1]">18</h3>
+</div>
+</div>
+<div class="flex items-center gap-2 text-xs font-semibold text-[#0288d1]">
+<span class="material-symbols-outlined text-sm">map</span>
+<span>Expanded to 2 new regions</span>
+</div>
+</div>
+</section>
+<!-- Main Content Area: Charts and Tables -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-8 pb-12">
+<!-- Horizontal Bar Chart -->
+<div class="lg:col-span-2 bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/10 shadow-sm">
+<div class="flex items-center justify-between mb-8">
+<h4 class="font-headline text-xl font-bold">Support Types Distribution</h4>
+<span class="material-symbols-outlined text-on-surface-variant">more_vert</span>
+</div>
+<div id="recentRequestsList" class="space-y-6">
+<!-- Medical -->
+<div class="space-y-2">
+<div class="flex justify-between font-label text-sm font-semibold">
+<span>Medical</span>
+<span class="text-primary">42%</span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container rounded-full" style="width: 42%;"></div>
+</div>
+</div>
+<!-- Mental Health -->
+<div class="space-y-2">
+<div class="flex justify-between font-label text-sm font-semibold">
+<span>Mental Health</span>
+<span class="text-primary">28%</span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container rounded-full" style="width: 28%;"></div>
+</div>
+</div>
+<!-- Home Care -->
+<div class="space-y-2">
+<div class="flex justify-between font-label text-sm font-semibold">
+<span>Home Care</span>
+<span class="text-primary">18%</span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container rounded-full" style="width: 18%;"></div>
+</div>
+</div>
+<!-- Medicine -->
+<div class="space-y-2">
+<div class="flex justify-between font-label text-sm font-semibold">
+<span>Medicine Delivery</span>
+<span class="text-primary">12%</span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container rounded-full" style="width: 12%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Requests List -->
+<div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/10 shadow-sm">
+<div class="flex items-center justify-between mb-8">
+<h4 class="font-headline text-xl font-bold">Recent Requests</h4>
+<button class="text-primary font-label text-sm font-bold hover:underline">View All</button>
+</div>
+<div class="space-y-6">
+<!-- Row 1 -->
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-bold text-on-surface-variant">JD</div>
+<div>
+<p class="font-headline font-bold text-sm">Jane Doe</p>
+<p class="font-label text-xs text-on-surface-variant">Medical Support</p>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-error-container text-on-error-container text-[10px] font-bold uppercase tracking-wider">High</span>
+</div>
+<!-- Row 2 -->
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-bold text-on-surface-variant">MK</div>
+<div>
+<p class="font-headline font-bold text-sm">Mark Knight</p>
+<p class="font-label text-xs text-on-surface-variant">Medicine Delivery</p>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-bold uppercase tracking-wider">Medium</span>
+</div>
+<!-- Row 3 -->
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-bold text-on-surface-variant">SR</div>
+<div>
+<p class="font-headline font-bold text-sm">Sarah Rose</p>
+<p class="font-label text-xs text-on-surface-variant">Home Care</p>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant text-[10px] font-bold uppercase tracking-wider">Low</span>
+</div>
+<!-- Row 4 (Bonus for rhythm) -->
+<div class="flex items-center justify-between group opacity-60">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-bold text-on-surface-variant">LW</div>
+<div>
+<p class="font-headline font-bold text-sm">Leo White</p>
+<p class="font-label text-xs text-on-surface-variant">Mental Health</p>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-error-container text-on-error-container text-[10px] font-bold uppercase tracking-wider">High</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-950/80 backdrop-blur-lg rounded-t-3xl shadow-[0_-8px_24px_rgba(25,28,30,0.06)]">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-[#0D9488] active:scale-90 transition-transform" href="code_home.html">
+<span class="material-symbols-outlined">home</span>
+<span class="font-plus-jakarta-sans text-[10px] font-semibold uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-[#0D9488] active:scale-90 transition-transform" href="code_psf.html">
+<span class="material-symbols-outlined">description</span>
+<span class="font-plus-jakarta-sans text-[10px] font-semibold uppercase tracking-widest mt-1">Forms</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-[#0D9488] active:scale-90 transition-transform" href="code_chatbot.html">
+<span class="material-symbols-outlined">chat</span>
+<span class="font-plus-jakarta-sans text-[10px] font-semibold uppercase tracking-widest mt-1">Chat</span>
+</a>
+<!-- Active State: Dashboard -->
+<a class="flex flex-col items-center justify-center bg-[#c2ebe3] dark:bg-[#004d46] text-[#00685f] dark:text-[#89f5e7] rounded-2xl px-5 py-2 active:scale-90 transition-transform" href="code_impact.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-plus-jakarta-sans text-[10px] font-semibold uppercase tracking-widest mt-1">Dashboard</span>
+</a>
+</nav>
+<script src="app.js" defer></script>
+</body></html>

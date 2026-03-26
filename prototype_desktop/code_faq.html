@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CareConnect | FAQ &amp; AI Support</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary": "#575e70",
+              "tertiary-container": "#00855b",
+              "on-tertiary": "#ffffff",
+              "surface-bright": "#f8f9fb",
+              "on-error": "#ffffff",
+              "on-primary-fixed-variant": "#005049",
+              "on-secondary-fixed": "#141b2b",
+              "inverse-surface": "#2e3132",
+              "outline": "#6d7a77",
+              "surface-container-low": "#f3f4f6",
+              "surface-container": "#edeef0",
+              "surface-variant": "#e1e2e4",
+              "on-primary-fixed": "#00201d",
+              "primary-container": "#008378",
+              "error-container": "#ffdad6",
+              "tertiary": "#006947",
+              "tertiary-fixed-dim": "#4edea3",
+              "error": "#ba1a1a",
+              "on-secondary-container": "#5c6274",
+              "on-tertiary-fixed": "#002113",
+              "outline-variant": "#bcc9c6",
+              "on-primary": "#ffffff",
+              "secondary-fixed-dim": "#c0c6db",
+              "inverse-on-surface": "#f0f1f3",
+              "inverse-primary": "#6bd8cb",
+              "tertiary-fixed": "#6ffbbe",
+              "on-error-container": "#93000a",
+              "on-background": "#191c1e",
+              "background": "#f8f9fb",
+              "on-surface-variant": "#3d4947",
+              "surface-tint": "#006a61",
+              "secondary-fixed": "#dce2f7",
+              "surface-container-highest": "#e1e2e4",
+              "surface": "#f8f9fb",
+              "on-tertiary-container": "#f5fff6",
+              "on-secondary-fixed-variant": "#404758",
+              "secondary-container": "#d9dff5",
+              "surface-dim": "#d9dadc",
+              "on-secondary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed-variant": "#005236",
+              "surface-container-high": "#e7e8ea",
+              "primary-fixed-dim": "#6bd8cb",
+              "primary-fixed": "#89f5e7",
+              "primary": "#00685f",
+              "on-primary-container": "#f4fffc",
+              "on-surface": "#191c1e"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body min-h-screen flex flex-col">
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<nav class="flex justify-between items-center px-8 h-20 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-50 font-headline">CareConnect</div>
+<div class="hidden md:flex items-center gap-8 font-manrope text-sm font-medium tracking-tight">
+<a class="text-slate-600 dark:text-slate-400 hover:text-teal-600 transition-colors" href="code_landing.html">Home</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-teal-600 transition-colors" href="code_form1.html">Get Support</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-teal-600 transition-colors" href="code_volunteer_desktop.html">Volunteer</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-teal-600 transition-colors" href="code_contact_desktop.html">Contact</a>
+<a class="text-teal-600 dark:text-teal-400 font-semibold border-b-2 border-teal-600" href="code_faq.html">FAQ</a>
+</div>
+<a class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-semibold hover:bg-primary-container transition-all scale-95 active:opacity-80 text-center" href="code_dashbord.html">Dashboard</a>
+</nav>
+</header>
+<main class="flex-grow pt-20 flex flex-col md:flex-row min-h-[calc(100vh-80px)] overflow-hidden">
+<!-- Left Panel: FAQ Accordion -->
+<section id="faqAccordion" class="w-full md:w-1/2 bg-surface p-8 md:p-16 overflow-y-auto hide-scrollbar">
+<div class="max-w-2xl mx-auto">
+<div class="mb-12">
+<span class="text-primary font-semibold tracking-wider text-xs uppercase mb-2 block">Knowledge Base</span>
+<h1 class="text-4xl md:text-5xl font-extrabold text-on-surface font-headline leading-tight">Frequently Asked <br/>Questions</h1>
+<p class="mt-4 text-secondary leading-relaxed max-w-md">Find quick answers to common questions about our human-centric care services and community impact.</p>
+</div>
+<div class="space-y-4">
+<!-- FAQ Items -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-300">
+<button class="w-full px-6 py-5 text-left flex justify-between items-center group">
+<span class="font-semibold text-on-surface font-headline">What services do you offer?</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">expand_more</span>
+</button>
+<div class="px-6 pb-5 text-secondary text-sm leading-relaxed border-t border-surface-container-low pt-4">
+                            We provide a comprehensive range of support including mental health counseling, specialized elderly care coordination, disability assistance, and community-driven peer support networks.
+                        </div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-300">
+<button class="w-full px-6 py-5 text-left flex justify-between items-center group">
+<span class="font-semibold text-on-surface font-headline">Is it free?</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">expand_more</span>
+</button>
+<div class="hidden px-6 pb-5 text-secondary text-sm">
+                            Our primary support services are 100% free for those in need, funded by our generous donors and global impact partners.
+                        </div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-300">
+<button class="w-full px-6 py-5 text-left flex justify-between items-center group">
+<span class="font-semibold text-on-surface font-headline">How to volunteer?</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">expand_more</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-300">
+<button class="w-full px-6 py-5 text-left flex justify-between items-center group">
+<span class="font-semibold text-on-surface font-headline">How long does support take?</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">expand_more</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-300">
+<button class="w-full px-6 py-5 text-left flex justify-between items-center group">
+<span class="font-semibold text-on-surface font-headline">Which cities are covered?</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">expand_more</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-300">
+<button class="w-full px-6 py-5 text-left flex justify-between items-center group">
+<span class="font-semibold text-on-surface font-headline">How is my data used?</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">expand_more</span>
+</button>
+</div>
+</div>
+<div class="mt-12 p-8 bg-surface-container-low rounded-2xl flex items-center gap-6">
+<img class="w-16 h-16 rounded-full object-cover shadow-sm" data-alt="portrait of a smiling female support representative with glasses in a modern bright office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyYLFw9VpVK5mPVEI8ZjKwXOf_FR2QuLQ7-WaqEYeGLmySjYGocuqFkX0BJIN_uZI8arN0Tmo0gNg7f-q8Mmtt4obcwtQzCyk11OhFphZH7S9iKH1S3PBJoTQkpHy15dVm7JdoYPYfMjrYo4bpdlBp1EEApAJ_JdISVcy64iRl9R_PHHKhLEx2weWmlNdWLfSKOWe1DGaJp5nnypdm1HQXpeHoZJCIRk7hLJSbFBVTLVlP4UxxwhOQoxv745edx521vxwsvf9B1Ew1"/>
+<div>
+<h4 class="font-bold font-headline text-on-surface">Still have questions?</h4>
+<p class="text-sm text-secondary">Our human support team is online Mon-Fri.</p>
+<button class="mt-2 text-primary text-sm font-semibold flex items-center gap-1 hover:underline">
+                            Contact a Human <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Panel: AI Chat Widget -->
+<section class="w-full md:w-1/2 bg-surface-container-low p-6 md:p-12 flex items-center justify-center">
+<div class="w-full max-w-lg h-[650px] bg-surface-container-lowest rounded-[2rem] shadow-2xl shadow-on-surface/5 flex flex-col overflow-hidden border border-white/40">
+<!-- Chat Header -->
+<div class="px-8 py-6 bg-gradient-to-br from-primary to-primary-container text-on-primary flex items-center gap-4">
+<div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg leading-tight">Ask Our AI Assistant</h3>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 bg-tertiary-fixed rounded-full animate-pulse"></span>
+<span class="text-xs text-on-primary/80 font-medium">Always online to help</span>
+</div>
+</div>
+</div>
+<!-- Chat History -->
+<div id="chatHistory" class="flex-grow p-6 overflow-y-auto space-y-6 hide-scrollbar bg-surface-container-lowest/50">
+<!-- Bot Message -->
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-lg">smart_toy</span>
+</div>
+<div class="bg-surface-container-high text-on-surface px-4 py-3 rounded-2xl rounded-tl-none max-w-[80%] text-sm leading-relaxed shadow-sm">
+                            Hello! I'm your CareConnect assistant. How can I support you today?
+                        </div>
+</div>
+<!-- User Message -->
+<div class="flex items-start gap-3 justify-end">
+<div class="bg-primary text-on-primary px-4 py-3 rounded-2xl rounded-tr-none max-w-[80%] text-sm leading-relaxed shadow-md">
+                            I'm looking for mental health support in Chicago.
+                        </div>
+</div>
+<!-- Bot Message -->
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-lg">smart_toy</span>
+</div>
+<div class="bg-surface-container-high text-on-surface px-4 py-3 rounded-2xl rounded-tl-none max-w-[80%] text-sm leading-relaxed shadow-sm">
+                            We have several partners in Chicago providing free counseling. Would you like to see the list or schedule a call?
+                        </div>
+</div>
+<!-- Bot Message Typing State (Simulated) -->
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-lg">smart_toy</span>
+</div>
+<div class="bg-surface-container-high px-4 py-3 rounded-2xl rounded-tl-none flex gap-1">
+<span class="w-1.5 h-1.5 bg-outline rounded-full animate-bounce"></span>
+<span class="w-1.5 h-1.5 bg-outline rounded-full animate-bounce [animation-delay:0.2s]"></span>
+<span class="w-1.5 h-1.5 bg-outline rounded-full animate-bounce [animation-delay:0.4s]"></span>
+</div>
+</div>
+</div>
+<!-- Chat Controls -->
+<div class="p-6 bg-surface-container-lowest space-y-4">
+<!-- Quick Replies -->
+<div id="chatQuickReplies" class="flex flex-wrap gap-2">
+<button class="px-4 py-2 bg-surface-container-low hover:bg-primary/10 hover:text-primary text-secondary text-xs font-semibold rounded-full border border-outline-variant/30 transition-all">Is it free?</button>
+<button class="px-4 py-2 bg-surface-container-low hover:bg-primary/10 hover:text-primary text-secondary text-xs font-semibold rounded-full border border-outline-variant/30 transition-all">How to volunteer?</button>
+<button class="px-4 py-2 bg-surface-container-low hover:bg-primary/10 hover:text-primary text-secondary text-xs font-semibold rounded-full border border-outline-variant/30 transition-all">Get support</button>
+</div>
+<!-- Input Bar -->
+<div class="relative flex items-center">
+<input id="chatInput" class="w-full bg-surface-container-low border-none rounded-2xl py-4 pl-6 pr-14 text-sm focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all text-on-surface placeholder:text-outline" placeholder="Type your message..." type="text"/>
+<button id="chatSend" class="absolute right-2 w-10 h-10 bg-primary text-on-primary rounded-xl flex items-center justify-center hover:bg-primary-container transition-all shadow-lg active:scale-95">
+<span class="material-symbols-outlined text-xl">send</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-16 px-8 mt-auto bg-slate-100 dark:bg-slate-950 font-inter text-sm leading-relaxed">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-screen-2xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-bold text-slate-900 dark:text-slate-50 font-headline mb-4">CareConnect</div>
+<p class="text-slate-500 dark:text-slate-400">Human-centric care for everyone, everywhere. Bridging the gap between need and support.</p>
+</div>
+<div>
+<h5 class="font-bold text-slate-900 dark:text-slate-50 mb-4">Organization</h5>
+<ul class="space-y-2 text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-teal-600 transition-colors" href="#">Our Impact</a></li>
+<li><a class="hover:text-teal-600 transition-colors" href="#">Global Network</a></li>
+<li><a class="hover:text-teal-600 transition-colors" href="#">Volunteer Hub</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-slate-900 dark:text-slate-50 mb-4">Legal</h5>
+<ul class="space-y-2 text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-teal-600 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-teal-600 transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-teal-600 transition-colors" href="#">Accessibility</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-slate-900 dark:text-slate-50 mb-4">Connect</h5>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-teal-600 transition-colors">public</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-teal-600 transition-colors">mail</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-teal-600 transition-colors">share</span>
+</div>
+</div>
+</div>
+<div class="max-w-screen-2xl mx-auto border-t border-slate-200 dark:border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-slate-400">
+<div>© 2025 CareConnect NGO. Human-centric care for everyone.</div>
+<div class="flex gap-6 mt-4 md:mt-0">
+<span>Privacy Policy</span>
+<span>Terms of Service</span>
+<span>Accessibility</span>
+<span>Global Impact</span>
+</div>
+</div>
+</footer>
+<script src="app.js" defer></script>
+</body></html>

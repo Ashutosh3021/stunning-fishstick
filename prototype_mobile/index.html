@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>CareConnect</title>
+</head>
+<body>
+  <script>
+    (function () {
+      var isMobile = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+      var target = isMobile ? 'code_home.html' : '../prototype_desktop/code_landing.html';
+      // Silent bootstrap: no redirect text, just replace the current document.
+      window.location.replace(target);
+    })();
+  </script>
+</body>
+</html>
+
