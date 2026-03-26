@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="routing.js"></script>
+<title>CareConnect | Dashboard</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary": "#575e70",
+                        "tertiary-container": "#00855b",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#f8f9fb",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#005049",
+                        "on-secondary-fixed": "#141b2b",
+                        "inverse-surface": "#2e3132",
+                        "outline": "#6d7a77",
+                        "surface-container-low": "#f3f4f6",
+                        "surface-container": "#edeef0",
+                        "surface-variant": "#e1e2e4",
+                        "on-primary-fixed": "#00201d",
+                        "primary-container": "#008378",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#006947",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#5c6274",
+                        "on-tertiary-fixed": "#002113",
+                        "outline-variant": "#bcc9c6",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#c0c6db",
+                        "inverse-on-surface": "#f0f1f3",
+                        "inverse-primary": "#6bd8cb",
+                        "tertiary-fixed": "#6ffbbe",
+                        "on-error-container": "#93000a",
+                        "on-background": "#191c1e",
+                        "background": "#f8f9fb",
+                        "on-surface-variant": "#3d4947",
+                        "surface-tint": "#006a61",
+                        "secondary-fixed": "#dce2f7",
+                        "surface-container-highest": "#e1e2e4",
+                        "surface": "#f8f9fb",
+                        "on-tertiary-container": "#f5fff6",
+                        "on-secondary-fixed-variant": "#404758",
+                        "secondary-container": "#d9dff5",
+                        "surface-dim": "#d9dadc",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "surface-container-high": "#e7e8ea",
+                        "primary-fixed-dim": "#6bd8cb",
+                        "primary-fixed": "#89f5e7",
+                        "primary": "#00685f",
+                        "on-primary-container": "#f4fffc",
+                        "on-surface": "#191c1e"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "md": "12px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-manrope { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; vertical-align: middle; }
+        .glass-nav { background: rgba(248, 249, 251, 0.8); backdrop-filter: blur(12px); }
+        .asymmetric-shadow { box-shadow: 0 12px 32px -4px rgba(25, 28, 30, 0.06); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- App Shell Container -->
+<div class="flex min-h-screen">
+<!-- Sidebar Navigation (Permanent Left) -->
+<aside class="w-64 bg-surface-container-lowest flex flex-col fixed h-full z-40 border-r border-outline-variant/20">
+<div class="px-8 h-20 flex items-center">
+<span class="text-2xl font-bold tracking-tight text-slate-900 font-manrope">CareConnect</span>
+</div>
+<nav class="flex-1 px-4 py-6 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-md bg-primary-container text-on-primary-container font-medium transition-all" href="code_dashbord.html">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Overview</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-md text-slate-600 hover:bg-surface-container-low transition-colors" href="code_form1.html">
+<span class="material-symbols-outlined" data-icon="volunteer_activism">volunteer_activism</span>
+<span>Requests</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-md text-slate-600 hover:bg-surface-container-low transition-colors" href="code_volunteer_desktop.html">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span>Volunteers</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-md text-slate-600 hover:bg-surface-container-low transition-colors" href="code_faq.html">
+<span class="material-symbols-outlined" data-icon="bar_chart">bar_chart</span>
+<span>Reports</span>
+</a>
+</nav>
+<div class="p-6 mt-auto border-t border-outline-variant/10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center overflow-hidden">
+<img alt="Profile" data-alt="professional portrait of a healthcare administrator in a bright office setting with friendly expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1kTWC1U5PxDpYo-dvmB5uCTg26ug0etG4Dm-Chgrvil9GIM7T5heW5zXqqFlolhhpopa9563C1b-a41IJ0xMtMUfokF0OEeJX0wgwnLJj95cpq44mb4ptJiFUrClXMJbLRms8E49dck5yOll1UscT6NQxf6lJmS08t4zi46c4bzSrVnn7Unm9Avlvj3Lxfqy7Z6EPpkogjQTTyCZ5blk-W9DyuhOIJbeTxW4T-9I28I97EUdLGpXA70KFSzZf42pxrOO-m5-T0jv1"/>
+</div>
+<div>
+<p class="text-sm font-semibold">Admin User</p>
+<p class="text-xs text-slate-500">Dashboard Access</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 ml-64 flex flex-col min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 right-0 left-64 h-20 glass-nav z-30 flex justify-between items-center px-8">
+<div>
+<h1 class="font-manrope text-xl font-bold text-slate-900">Dashboard Overview</h1>
+<p class="text-xs text-slate-500 font-medium">Monday, Oct 24, 2025</p>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative">
+<span class="material-symbols-outlined text-slate-600 p-2 hover:bg-surface-container-low rounded-full cursor-pointer">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full ring-2 ring-surface"></span>
+</div>
+<button class="bg-primary text-on-primary px-5 py-2.5 rounded-md font-medium text-sm flex items-center gap-2 hover:bg-primary-container transition-all scale-95 active:opacity-80">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+                        New Report
+                    </button>
+</div>
+</header>
+<!-- Dashboard Content Canvas -->
+<div class="pt-24 p-8 space-y-8 max-w-7xl mx-auto w-full">
+<!-- KPI Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Total Requests -->
+<div class="bg-surface-container-lowest p-6 rounded-md asymmetric-shadow border-b-4 border-primary">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-primary-container/10 rounded-lg">
+<span class="material-symbols-outlined text-primary" data-icon="medical_services">medical_services</span>
+</div>
+<span class="flex items-center text-xs font-semibold text-tertiary-container bg-tertiary-container/10 px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-sm mr-1" data-icon="trending_up">trending_up</span> 12%
+                            </span>
+</div>
+<p class="text-slate-500 text-sm font-medium">Total Requests</p>
+<h3 id="kpiTotalRequests" class="text-3xl font-bold font-manrope text-on-surface mt-1">2,841</h3>
+</div>
+<!-- Active Volunteers -->
+<div class="bg-surface-container-lowest p-6 rounded-md asymmetric-shadow border-b-4 border-secondary">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-secondary-container/20 rounded-lg">
+<span class="material-symbols-outlined text-secondary" data-icon="volunteer_activism">volunteer_activism</span>
+</div>
+<span class="flex items-center text-xs font-semibold text-tertiary-container bg-tertiary-container/10 px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-sm mr-1" data-icon="trending_up">trending_up</span> 8%
+                            </span>
+</div>
+<p class="text-slate-500 text-sm font-medium">Active Volunteers</p>
+<h3 id="kpiActiveVolunteers" class="text-3xl font-bold font-manrope text-on-surface mt-1">456</h3>
+</div>
+<!-- Pending Cases -->
+<div class="bg-surface-container-lowest p-6 rounded-md asymmetric-shadow border-b-4 border-error">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-error-container/20 rounded-lg">
+<span class="material-symbols-outlined text-error" data-icon="pending_actions">pending_actions</span>
+</div>
+<span class="flex items-center text-xs font-semibold text-error bg-error-container/40 px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-sm mr-1" data-icon="trending_down">trending_down</span> 4%
+                            </span>
+</div>
+<p class="text-slate-500 text-sm font-medium">Pending Cases</p>
+<h3 id="kpiPendingCases" class="text-3xl font-bold font-manrope text-on-surface mt-1">82</h3>
+</div>
+<!-- Cities Reached -->
+<div class="bg-surface-container-lowest p-6 rounded-md asymmetric-shadow border-b-4 border-tertiary">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-tertiary-container/10 rounded-lg">
+<span class="material-symbols-outlined text-tertiary" data-icon="location_city">location_city</span>
+</div>
+<span class="flex items-center text-xs font-semibold text-slate-500 bg-surface-container px-2 py-1 rounded-full">
+                                Static
+                            </span>
+</div>
+<p class="text-slate-500 text-sm font-medium">Cities Reached</p>
+<h3 id="kpiCitiesReached" class="text-3xl font-bold font-manrope text-on-surface mt-1">14</h3>
+</div>
+</div>
+<!-- Charts Row -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Bar Chart: Monthly Requests -->
+<div class="lg:col-span-2 bg-surface-container-lowest p-8 rounded-md asymmetric-shadow">
+<div class="flex justify-between items-center mb-8">
+<h4 class="font-manrope font-bold text-lg">Monthly Requests</h4>
+<select class="bg-surface-container-low border-none rounded-md text-sm px-4 py-2 focus:ring-primary/20">
+<option>Last 6 Months</option>
+<option>Year to Date</option>
+</select>
+</div>
+<div class="flex items-end justify-between h-64 gap-4 px-4 pt-4">
+<!-- Visual Bar Representation -->
+<div class="flex-1 flex flex-col items-center gap-3">
+<div class="w-full bg-primary-container/20 rounded-t-lg relative group h-40">
+<div class="absolute bottom-0 w-full bg-primary rounded-t-lg transition-all h-[65%]"></div>
+</div>
+<span class="text-xs text-slate-500 font-medium">MAY</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-3">
+<div class="w-full bg-primary-container/20 rounded-t-lg relative h-40">
+<div class="absolute bottom-0 w-full bg-primary rounded-t-lg h-[45%]"></div>
+</div>
+<span class="text-xs text-slate-500 font-medium">JUN</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-3">
+<div class="w-full bg-primary-container/20 rounded-t-lg relative h-40">
+<div class="absolute bottom-0 w-full bg-primary rounded-t-lg h-[85%]"></div>
+</div>
+<span class="text-xs text-slate-500 font-medium">JUL</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-3">
+<div class="w-full bg-primary-container/20 rounded-t-lg relative h-40">
+<div class="absolute bottom-0 w-full bg-primary rounded-t-lg h-[55%]"></div>
+</div>
+<span class="text-xs text-slate-500 font-medium">AUG</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-3">
+<div class="w-full bg-primary-container/20 rounded-t-lg relative h-40">
+<div class="absolute bottom-0 w-full bg-primary rounded-t-lg h-[75%]"></div>
+</div>
+<span class="text-xs text-slate-500 font-medium">SEP</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-3">
+<div class="w-full bg-primary-container/20 rounded-t-lg relative h-40">
+<div class="absolute bottom-0 w-full bg-primary rounded-t-lg h-[95%]"></div>
+</div>
+<span class="text-xs text-slate-500 font-medium">OCT</span>
+</div>
+</div>
+</div>
+<!-- Donut Chart: Support Breakdown -->
+<div class="bg-surface-container-lowest p-8 rounded-md asymmetric-shadow flex flex-col">
+<h4 class="font-manrope font-bold text-lg mb-8">Support Type Breakdown</h4>
+<div class="relative flex-1 flex items-center justify-center">
+<div class="w-48 h-48 rounded-full border-[18px] border-surface-container-low flex items-center justify-center relative">
+<div class="absolute inset-0 rounded-full border-[18px] border-primary border-t-transparent border-r-transparent rotate-[45deg]"></div>
+<div class="absolute inset-0 rounded-full border-[18px] border-tertiary-container border-b-transparent border-l-transparent border-r-transparent -rotate-[15deg]"></div>
+<div class="text-center">
+<p class="text-2xl font-bold font-manrope">2.8k</p>
+<p class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Total</p>
+</div>
+</div>
+</div>
+<div class="mt-8 space-y-3">
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="text-slate-600">Home Care</span>
+</div>
+<span class="font-semibold">45%</span>
+</div>
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-tertiary-container"></span>
+<span class="text-slate-600">Medical Supplies</span>
+</div>
+<span class="font-semibold">30%</span>
+</div>
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-surface-container"></span>
+<span class="text-slate-600">Counseling</span>
+</div>
+<span class="font-semibold">25%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Support Requests Table -->
+<div class="bg-surface-container-lowest rounded-md asymmetric-shadow overflow-hidden">
+<div class="px-8 py-6 flex justify-between items-center border-b border-outline-variant/10">
+<h4 class="font-manrope font-bold text-lg">Recent Support Requests</h4>
+<button class="text-primary text-sm font-semibold hover:underline">View All Requests</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-surface-container-low/50 text-slate-500 text-xs font-bold uppercase tracking-wider">
+<tr>
+<th class="px-8 py-4">Requester Name</th>
+<th class="px-6 py-4">Support Type</th>
+<th class="px-6 py-4">Location</th>
+<th class="px-6 py-4">Urgency</th>
+<th class="px-6 py-4">Status</th>
+<th class="px-8 py-4 text-right">Date Submitted</th>
+</tr>
+</thead>
+<tbody id="requestsTbody" class="divide-y divide-outline-variant/10 text-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-container/10 flex items-center justify-center text-primary font-bold text-[10px]">
+                                                EM
+                                            </div>
+<span class="font-medium text-slate-900">Elena Martinez</span>
+</div>
+</td>
+<td class="px-6 py-5 text-slate-600">Home Care Assistant</td>
+<td class="px-6 py-5 text-slate-600">Madrid</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 rounded-full text-[11px] font-bold bg-error-container/20 text-error">CRITICAL</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-slate-700">In Progress</span>
+</div>
+</td>
+<td class="px-8 py-5 text-right text-slate-500">24 Oct, 09:12</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-container/10 flex items-center justify-center text-primary font-bold text-[10px]">
+                                                JS
+                                            </div>
+<span class="font-medium text-slate-900">Julian Schmidt</span>
+</div>
+</td>
+<td class="px-6 py-5 text-slate-600">Medical Transport</td>
+<td class="px-6 py-5 text-slate-600">Berlin</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 rounded-full text-[11px] font-bold bg-secondary-container/30 text-secondary">MODERATE</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-slate-700">Open</span>
+</div>
+</td>
+<td class="px-8 py-5 text-right text-slate-500">23 Oct, 14:45</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-container/10 flex items-center justify-center text-primary font-bold text-[10px]">
+                                                LC
+                                            </div>
+<span class="font-medium text-slate-900">Lucia Conti</span>
+</div>
+</td>
+<td class="px-6 py-5 text-slate-600">Meal Delivery</td>
+<td class="px-6 py-5 text-slate-600">Rome</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 rounded-full text-[11px] font-bold bg-tertiary-container/10 text-tertiary">LOW</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+<span class="text-slate-700">Resolved</span>
+</div>
+</td>
+<td class="px-8 py-5 text-right text-slate-500">23 Oct, 11:20</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Dashboard Footer -->
+<footer class="w-full py-12 px-8 mt-auto bg-slate-100 dark:bg-slate-950">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-screen-2xl mx-auto">
+<div class="col-span-1 md:col-span-2">
+<span class="text-xl font-bold text-slate-900 font-manrope">CareConnect</span>
+<p class="font-inter text-sm leading-relaxed text-slate-500 mt-4 max-w-sm">
+                            Empowering communities through human-centric care and seamless support coordination. © 2025 CareConnect NGO.
+                        </p>
+</div>
+<div>
+<h5 class="text-slate-900 font-bold mb-4">Platform</h5>
+<ul class="space-y-2">
+<li><a class="text-slate-500 hover:text-teal-600 text-sm transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 hover:text-teal-600 text-sm transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-slate-900 font-bold mb-4">Resources</h5>
+<ul class="space-y-2">
+<li><a class="text-slate-500 hover:text-teal-600 text-sm transition-colors" href="#">Accessibility</a></li>
+<li><a class="text-slate-500 hover:text-teal-600 text-sm transition-colors" href="#">Global Impact</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</main>
+</div>
+<script src="app.js" defer></script>
+</body></html>
