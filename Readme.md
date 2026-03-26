@@ -21,8 +21,8 @@ This project is configured for deployment to GitHub Pages. To deploy the static 
     npm run deploy
     ```
     This command will automatically:
-    - Build the project into a `build/` directory.
-    - Push the contents of the `build/` directory to a new `gh-pages` branch.
+    - Build the project into a `public/` directory.
+    - Push the contents of the `public/` directory to a new `gh-pages` branch.
     - GitHub will then automatically host the site at `https://ashutosh3021.github.io/stunning-fishstick`.
 
 ### **⚠️ Important: Gemini AI on GitHub Pages**

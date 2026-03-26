@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport"/>
+<script src="routing.js"></script>
+<title>CareConnect | Request Support</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-surface": "#2e3132",
+              "outline": "#6d7a77",
+              "on-surface-variant": "#3d4947",
+              "primary-container": "#008378",
+              "on-error": "#ffffff",
+              "on-primary-fixed": "#00201d",
+              "secondary": "#3f6560",
+              "secondary-fixed-dim": "#a6cfc8",
+              "inverse-primary": "#6bd8cb",
+              "surface-container-lowest": "#ffffff",
+              "surface": "#f8f9fb",
+              "on-primary-fixed-variant": "#005049",
+              "on-primary-container": "#f4fffc",
+              "surface-container": "#edeef0",
+              "secondary-fixed": "#c2ebe3",
+              "primary-fixed-dim": "#6bd8cb",
+              "tertiary-container": "#b05e3d",
+              "surface-container-low": "#f3f4f6",
+              "surface-dim": "#d9dadc",
+              "on-tertiary-fixed": "#370e00",
+              "surface-tint": "#006a61",
+              "on-error-container": "#93000a",
+              "on-secondary": "#ffffff",
+              "on-background": "#191c1e",
+              "secondary-container": "#c2ebe3",
+              "surface-container-highest": "#e1e2e4",
+              "on-secondary-fixed": "#00201d",
+              "on-secondary-container": "#456b66",
+              "surface-bright": "#f8f9fb",
+              "inverse-on-surface": "#f0f1f3",
+              "on-tertiary-container": "#fffbff",
+              "on-secondary-fixed-variant": "#274d48",
+              "on-primary": "#ffffff",
+              "primary": "#00685f",
+              "surface-container-high": "#e7e8ea",
+              "error-container": "#ffdad6",
+              "error": "#ba1a1a",
+              "primary-fixed": "#89f5e7",
+              "outline-variant": "#bcc9c6",
+              "background": "#f8f9fb",
+              "tertiary": "#924628",
+              "tertiary-fixed-dim": "#ffb59a",
+              "on-tertiary-fixed-variant": "#773215",
+              "on-surface": "#191c1e",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed": "#ffdbce",
+              "surface-variant": "#e1e2e4"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-glass {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none !important;
+            border-color: #00685f !important;
+            box-shadow: 0 0 0 2px rgba(0, 104, 95, 0.1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-[#f8f9fb] dark:bg-slate-900">
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:bg-surface-container-high rounded-full p-2 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-headline font-bold text-2xl tracking-tighter text-[#0D9488] dark:text-[#2dd4bf]">Request Support</h1>
+</div>
+<div class="flex items-center">
+<button class="text-on-surface-variant hover:bg-surface-container-high rounded-full p-2 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+</header>
+<main class="pt-20 pb-32 px-6 max-w-2xl mx-auto">
+<!-- Form Introduction -->
+<section class="mb-8">
+<div class="rounded-xl p-6 bg-surface-container-low mb-6">
+<p class="text-on-surface-variant text-sm font-medium leading-relaxed">
+                    Fill out the form below to connect with a specialized care volunteer. Our team typically responds within 4 hours.
+                </p>
+</div>
+</section>
+<!-- Form Fields -->
+<form class="space-y-6">
+<div class="grid grid-cols-1 gap-6">
+<!-- Full Name -->
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1 font-headline tracking-wide" for="fullname">Full Name</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-xl px-4 py-3.5 text-on-surface placeholder:text-outline-variant transition-all" id="fullname" placeholder="e.g. Eleanor Shellstrop" type="text"/>
+</div>
+<!-- Age & Gender Grid -->
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1 font-headline tracking-wide" for="age">Age</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-xl px-4 py-3.5 text-on-surface placeholder:text-outline-variant transition-all" id="age" placeholder="24" type="number"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1 font-headline tracking-wide" for="gender">Gender</label>
+<select class="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-xl px-4 py-3.5 text-on-surface transition-all appearance-none" id="gender">
+<option value="">Select</option>
+<option value="female">Female</option>
+<option value="male">Male</option>
+<option value="non-binary">Non-binary</option>
+<option value="prefer-not">Prefer not to say</option>
+</select>
+</div>
+</div>
+<!-- Contact Info Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1 font-headline tracking-wide" for="phone">Phone</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-xl px-4 py-3.5 text-on-surface placeholder:text-outline-variant transition-all" id="phone" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1 font-headline tracking-wide" for="city">City</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-xl px-4 py-3.5 text-on-surface placeholder:text-outline-variant transition-all" id="city" placeholder="San Francisco" type="text"/>
+</div>
+</div>
+<!-- Email -->
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1 font-headline tracking-wide" for="email">Email</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-xl px-4 py-3.5 text-on-surface placeholder:text-outline-variant transition-all" id="email" placeholder="eleanor@example.com" type="email"/>
+</div>
+<!-- Type of Support -->
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1 font-headline tracking-wide" for="support-type">Type of Support</label>
+<select class="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-xl px-4 py-3.5 text-on-surface transition-all appearance-none" id="support-type">
+<option value="">Select support type</option>
+<option value="medical">Medical Consultation</option>
+<option value="mental-health">Mental Health Support</option>
+<option value="daily-care">Daily Living Assistance</option>
+<option value="transportation">Transportation Services</option>
+</select>
+</div>
+<!-- Description -->
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1 font-headline tracking-wide" for="description">Description of Need</label>
+<textarea class="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-xl px-4 py-3.5 text-on-surface placeholder:text-outline-variant transition-all resize-none" id="description" placeholder="Please provide details about the support you require..." rows="4"></textarea>
+</div>
+<!-- Urgency Toggles -->
+<div class="space-y-3 pt-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1 font-headline tracking-wide">Urgency Level</label>
+<div class="flex items-center gap-3">
+<label class="flex-1">
+<input class="hidden peer" name="urgency" type="radio" value="low"/>
+<div class="text-center py-3 rounded-full border border-outline-variant/30 text-sm font-bold text-on-surface-variant peer-checked:bg-secondary-container peer-checked:text-on-secondary-container peer-checked:border-transparent transition-all cursor-pointer">
+                                Low
+                            </div>
+</label>
+<label class="flex-1">
+<input checked="" class="hidden peer" name="urgency" type="radio" value="medium"/>
+<div class="text-center py-3 rounded-full border border-outline-variant/30 text-sm font-bold text-on-surface-variant peer-checked:bg-secondary-container peer-checked:text-on-secondary-container peer-checked:border-transparent transition-all cursor-pointer">
+                                Medium
+                            </div>
+</label>
+<label class="flex-1">
+<input class="hidden peer" name="urgency" type="radio" value="high"/>
+<div class="text-center py-3 rounded-full border border-outline-variant/30 text-sm font-bold text-tertiary peer-checked:bg-tertiary-container peer-checked:text-on-tertiary-container peer-checked:border-transparent transition-all cursor-pointer">
+                                High
+                            </div>
+</label>
+</div>
+</div>
+</div>
+<!-- Submit Button (Floating/Pinned near bottom context) -->
+<div class="pt-8 pb-10">
+<button class="w-full py-4 rounded-full bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold text-lg shadow-lg shadow-primary/20 active:scale-95 transition-transform" type="submit">
+                    Submit Request
+                </button>
+</div>
+</form>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-950/80 backdrop-blur-lg shadow-[0_-8px_24px_rgba(25,28,30,0.06)] rounded-t-3xl">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-[#0D9488] active:scale-90 transition-transform" href="code_home.html">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-plus-jakarta-sans text-[10px] font-semibold uppercase tracking-widest">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#c2ebe3] dark:bg-[#004d46] text-[#00685f] dark:text-[#89f5e7] rounded-2xl px-5 py-2 active:scale-90 transition-transform" href="code_psf.html">
+<span class="material-symbols-outlined mb-1">description</span>
+<span class="font-plus-jakarta-sans text-[10px] font-semibold uppercase tracking-widest">Forms</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-[#0D9488] active:scale-90 transition-transform" href="code_chatbot.html">
+<span class="material-symbols-outlined mb-1">chat</span>
+<span class="font-plus-jakarta-sans text-[10px] font-semibold uppercase tracking-widest">Chat</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-[#0D9488] active:scale-90 transition-transform" href="code_impact.html">
+<span class="material-symbols-outlined mb-1">dashboard</span>
+<span class="font-plus-jakarta-sans text-[10px] font-semibold uppercase tracking-widest">Dashboard</span>
+</a>
+</nav>
+<script src="app.js" defer></script>
+</body></html>

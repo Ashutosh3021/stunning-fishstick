@@ -17,22 +17,23 @@ GitHub Pages only hosts **static** files (HTML, CSS, JS). Our AI functionality r
 
 ## Step 1: Prepare your Project for Vercel
 
-Vercel automatically detects the `package.json` and `server.js` file. To ensure a smooth deployment, your `package.json` should have the following `start` script (which we've already configured):
+The project is now configured with a `vercel.json` file to correctly handle both the frontend static files and the Node.js API. We've updated the build script to generate a `public` directory, which satisfies Vercel's default output expectations.
 
-```json
-"scripts": {
-  "start": "node server.js"
-}
-```
+### **vercel.json Configuration**
+We have added a `vercel.json` file that:
+- Sets `outputDirectory` to `public`.
+- Routes all `/api/*` requests to the `server.js` backend function.
+- Serves everything else as static files.
 
 ## Step 2: Deploying to Vercel (Recommended)
 
 1.  **Sign up/Log in**: Go to [vercel.com](https://vercel.com) and sign in with your GitHub account.
 2.  **Import Project**: Click **"Add New"** > **"Project"**.
-3.  **Connect GitHub**: Select your `stunning-fishstick` repository.
+3.  **Connect GitHub**: Select your repository.
 4.  **Configure Project**:
-    -   **Framework Preset**: Select "Other" or leave it as "Auto-detected".
+    -   **Framework Preset**: Select "Other" (the `vercel.json` will override this anyway).
     -   **Root Directory**: Leave as `./`.
+    -   **Build & Output Settings**: Vercel should automatically detect the `npm run build` command and the `public` output directory from our configuration.
 5.  **Environment Variables (CRITICAL)**:
     -   Expand the **"Environment Variables"** section.
     -   Add a new variable:

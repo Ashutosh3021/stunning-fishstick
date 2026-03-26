@@ -5,11 +5,11 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "prebuild": "shx rm -rf build && shx mkdir build",
-    "build": "shx cp -r index.html prototype_mobile prototype_desktop build/",
+    "prebuild": "shx rm -rf public && shx mkdir public",
+    "build": "shx cp -r index.html prototype_mobile prototype_desktop public/",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "serve-build": "serve -s build"
+    "deploy": "gh-pages -d public",
+    "serve-build": "serve -s public"
   },
   "dependencies": {
     "@google/generative-ai": "^0.3.1",

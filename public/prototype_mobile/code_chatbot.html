@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport"/>
+<script src="routing.js"></script>
+<title>Ask CareConnect AI</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-surface": "#2e3132",
+              "outline": "#6d7a77",
+              "on-surface-variant": "#3d4947",
+              "primary-container": "#008378",
+              "on-error": "#ffffff",
+              "on-primary-fixed": "#00201d",
+              "secondary": "#3f6560",
+              "secondary-fixed-dim": "#a6cfc8",
+              "inverse-primary": "#6bd8cb",
+              "surface-container-lowest": "#ffffff",
+              "surface": "#f8f9fb",
+              "on-primary-fixed-variant": "#005049",
+              "on-primary-container": "#f4fffc",
+              "surface-container": "#edeef0",
+              "secondary-fixed": "#c2ebe3",
+              "primary-fixed-dim": "#6bd8cb",
+              "tertiary-container": "#b05e3d",
+              "surface-container-low": "#f3f4f6",
+              "surface-dim": "#d9dadc",
+              "on-tertiary-fixed": "#370e00",
+              "surface-tint": "#006a61",
+              "on-error-container": "#93000a",
+              "on-secondary": "#ffffff",
+              "on-background": "#191c1e",
+              "secondary-container": "#c2ebe3",
+              "surface-container-highest": "#e1e2e4",
+              "on-secondary-fixed": "#00201d",
+              "on-secondary-container": "#456b66",
+              "surface-bright": "#f8f9fb",
+              "inverse-on-surface": "#f0f1f3",
+              "on-tertiary-container": "#fffbff",
+              "on-secondary-fixed-variant": "#274d48",
+              "on-primary": "#ffffff",
+              "primary": "#00685f",
+              "surface-container-high": "#e7e8ea",
+              "error-container": "#ffdad6",
+              "error": "#ba1a1a",
+              "primary-fixed": "#89f5e7",
+              "outline-variant": "#bcc9c6",
+              "background": "#f8f9fb",
+              "tertiary": "#924628",
+              "tertiary-fixed-dim": "#ffb59a",
+              "on-tertiary-fixed-variant": "#773215",
+              "on-surface": "#191c1e",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed": "#ffdbce",
+              "surface-variant": "#e1e2e4"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .chat-container {
+            height: calc(100vh - 128px - 140px); /* Adjusting for TopAppBar, BottomNavBar, and Input Bar */
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-[#f8f9fb] dark:bg-slate-900">
+<div class="flex items-center gap-4">
+<button class="text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors active:scale-95 duration-200 p-2 rounded-full">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-manrope font-bold text-2xl tracking-tighter text-[#0D9488] dark:text-[#2dd4bf]">Ask CareConnect AI</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors active:scale-95 duration-200 p-2 rounded-full">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<!-- Separation Line -->
+<div class="absolute bottom-0 left-0 w-full bg-[#f3f4f6] dark:bg-slate-800 h-px"></div>
+</header>
+<!-- Main Content Area -->
+<main class="pt-20 pb-44 px-4 max-w-2xl mx-auto">
+<!-- Welcome / Bot Profile Intro -->
+<div class="flex flex-col items-center mb-10 text-center animate-fade-in">
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center mb-4 shadow-sm">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<p class="text-on-surface-variant text-sm font-medium tracking-wide uppercase font-label mb-1">AI Assistant</p>
+<h2 class="font-headline text-2xl font-bold tracking-tight text-on-surface">How can I help you today?</h2>
+</div>
+<!-- Chat Conversation -->
+<div id="mobileChatHistory" class="space-y-6 flex flex-col chat-container overflow-y-auto hide-scrollbar">
+<!-- Bot Message -->
+<div class="flex justify-start items-end gap-2 group">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-xs text-on-surface-variant">smart_toy</span>
+</div>
+<div class="max-w-[80%] bg-surface-container-low text-on-surface p-4 rounded-2xl rounded-bl-none shadow-sm">
+<p class="text-[15px] leading-relaxed">Hello! I'm your CareConnect assistant. Ask me anything about our services or how to get support.</p>
+</div>
+</div>
+<!-- User Message -->
+<div class="flex justify-end items-end gap-2 group">
+<div class="max-w-[80%] bg-primary text-on-primary p-4 rounded-2xl rounded-br-none shadow-md">
+<p class="text-[15px] leading-relaxed">How do I request medical support?</p>
+</div>
+</div>
+<!-- Bot Message -->
+<div class="flex justify-start items-end gap-2 group">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-xs text-on-surface-variant">smart_toy</span>
+</div>
+<div class="max-w-[80%] bg-surface-container-low text-on-surface p-4 rounded-2xl rounded-bl-none shadow-sm border border-outline-variant/10">
+<p class="text-[15px] leading-relaxed">You can fill the Patient Support form on our home screen. Select your support type and urgency level.</p>
+</div>
+</div>
+<!-- User Message -->
+<div class="flex justify-end items-end gap-2 group">
+<div class="max-w-[80%] bg-primary text-on-primary p-4 rounded-2xl rounded-br-none shadow-md">
+<p class="text-[15px] leading-relaxed">Is this service free?</p>
+</div>
+</div>
+<!-- Bot Message -->
+<div class="flex justify-start items-end gap-2 group">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-xs text-on-surface-variant">smart_toy</span>
+</div>
+<div class="max-w-[80%] bg-surface-container-low text-on-surface p-4 rounded-2xl rounded-bl-none shadow-sm">
+<p class="text-[15px] leading-relaxed">Yes! CareConnect services are completely free for patients in need.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Fixed Bottom Controls Container -->
+<div class="fixed bottom-[88px] left-0 w-full z-40 bg-gradient-to-t from-surface via-surface to-transparent pt-8 pb-4">
+<div class="max-w-2xl mx-auto px-4">
+<!-- Quick Reply Chips -->
+<div id="mobileChatQuickReplies" class="flex gap-2 overflow-x-auto pb-4 hide-scrollbar snap-x">
+<button class="flex-shrink-0 snap-start px-5 py-2.5 rounded-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface-variant font-medium text-sm hover:bg-secondary-container transition-colors">
+                    Is it free?
+                </button>
+<button class="flex-shrink-0 snap-start px-5 py-2.5 rounded-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface-variant font-medium text-sm hover:bg-secondary-container transition-colors">
+                    How to volunteer?
+                </button>
+<button class="flex-shrink-0 snap-start px-5 py-2.5 rounded-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface-variant font-medium text-sm hover:bg-secondary-container transition-colors">
+                    Get support
+                </button>
+</div>
+<!-- Chat Input Bar -->
+<div class="relative flex items-center gap-2 bg-surface-container-lowest rounded-full px-2 py-2 shadow-lg border border-outline-variant/20">
+<button class="w-10 h-10 flex items-center justify-center text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+</button>
+<input id="mobileChatInput" class="flex-1 bg-transparent border-none focus:ring-0 text-on-surface placeholder-on-surface-variant/60 font-body py-2" placeholder="Type your question..." type="text"/>
+<button id="mobileChatSend" class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center active:scale-90 transition-transform shadow-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</div>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-950/80 backdrop-blur-lg rounded-t-3xl shadow-[0_-8px_24px_rgba(25,28,30,0.06)]">
+<!-- Home -->
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-[#0D9488] dark:hover:text-[#2dd4bf] active:scale-90 transition-transform" href="code_home.html">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-plus-jakarta-sans text-[10px] font-semibold uppercase tracking-widest">Home</span>
+</a>
+<!-- Forms -->
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-[#0D9488] dark:hover:text-[#2dd4bf] active:scale-90 transition-transform" href="code_psf.html">
+<span class="material-symbols-outlined mb-1">description</span>
+<span class="font-plus-jakarta-sans text-[10px] font-semibold uppercase tracking-widest">Forms</span>
+</a>
+<!-- Chat (ACTIVE) -->
+<a class="flex flex-col items-center justify-center bg-[#c2ebe3] dark:bg-[#004d46] text-[#00685f] dark:text-[#89f5e7] rounded-2xl px-5 py-2 active:scale-90 transition-transform" href="code_chatbot.html">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">chat</span>
+<span class="font-plus-jakarta-sans text-[10px] font-semibold uppercase tracking-widest">Chat</span>
+</a>
+<!-- Dashboard -->
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-[#0D9488] dark:hover:text-[#2dd4bf] active:scale-90 transition-transform" href="code_impact.html">
+<span class="material-symbols-outlined mb-1">dashboard</span>
+<span class="font-plus-jakarta-sans text-[10px] font-semibold uppercase tracking-widest">Dashboard</span>
+</a>
+</nav>
+<!-- Hidden FAB as per suppression logic (suppressed on chat/details screens) -->
+<script src="app.js" defer></script>
+</body></html>

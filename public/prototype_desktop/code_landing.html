@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="routing.js"></script>
+<!-- 2.3 Preload hints for critical assets -->
+<link rel="preload" href="style.css" as="style">
+<link rel="preload" href="app.js" as="script">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" as="style">
+<title>CareConnect | Desktop Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary": "#575e70",
+              "tertiary-container": "#00855b",
+              "on-tertiary": "#ffffff",
+              "surface-bright": "#f8f9fb",
+              "on-error": "#ffffff",
+              "on-primary-fixed-variant": "#005049",
+              "on-secondary-fixed": "#141b2b",
+              "inverse-surface": "#2e3132",
+              "outline": "#6d7a77",
+              "surface-container-low": "#f3f4f6",
+              "surface-container": "#edeef0",
+              "surface-variant": "#e1e2e4",
+              "on-primary-fixed": "#00201d",
+              "primary-container": "#008378",
+              "error-container": "#ffdad6",
+              "tertiary": "#006947",
+              "tertiary-fixed-dim": "#4edea3",
+              "error": "#ba1a1a",
+              "on-secondary-container": "#5c6274",
+              "on-tertiary-fixed": "#002113",
+              "outline-variant": "#bcc9c6",
+              "on-primary": "#ffffff",
+              "secondary-fixed-dim": "#c0c6db",
+              "inverse-on-surface": "#f0f1f3",
+              "inverse-primary": "#6bd8cb",
+              "tertiary-fixed": "#6ffbbe",
+              "on-error-container": "#93000a",
+              "on-background": "#191c1e",
+              "background": "#f8f9fb",
+              "on-surface-variant": "#3d4947",
+              "surface-tint": "#006a61",
+              "secondary-fixed": "#dce2f7",
+              "surface-container-highest": "#e1e2e4",
+              "surface": "#f8f9fb",
+              "on-tertiary-container": "#f5fff6",
+              "on-secondary-fixed-variant": "#404758",
+              "secondary-container": "#d9dff5",
+              "surface-dim": "#d9dadc",
+              "on-secondary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed-variant": "#005236",
+              "surface-container-high": "#e7e8ea",
+              "primary-fixed-dim": "#6bd8cb",
+              "primary-fixed": "#89f5e7",
+              "primary": "#00685f",
+              "on-primary-container": "#f4fffc",
+              "on-surface": "#191c1e"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-transition {
+            background: linear-gradient(to bottom, transparent, rgba(243, 244, 246, 0.5));
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none no-border tonal-transition via-bg-shift">
+<div class="flex justify-between items-center px-8 h-20 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-50 font-headline">
+                CareConnect
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-teal-600 dark:text-teal-400 font-semibold border-b-2 border-teal-600 font-manrope text-sm tracking-tight py-1" href="code_landing.html">Home</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-teal-600 transition-colors font-manrope text-sm font-medium tracking-tight py-1 transition-all duration-300" href="code_form1.html">Get Support</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-teal-600 transition-colors font-manrope text-sm font-medium tracking-tight py-1 transition-all duration-300" href="code_volunteer_desktop.html">Volunteer</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-teal-600 transition-colors font-manrope text-sm font-medium tracking-tight py-1 transition-all duration-300" href="code_contact_desktop.html">Contact</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-teal-600 transition-colors font-manrope text-sm font-medium tracking-tight py-1 transition-all duration-300" href="code_faq.html">FAQ</a>
+</div>
+<div class="flex items-center">
+<a class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-headline font-semibold text-sm scale-95 active:opacity-80 transition-transform hover:bg-primary-container text-center" href="code_dashbord.html">Dashboard</a>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-surface py-24 md:py-32 lg:py-40">
+<div class="max-w-screen-2xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<!-- Hero Content -->
+<div class="space-y-8 z-10">
+<h1 class="font-headline text-5xl md:text-6xl lg:text-7xl font-extrabold text-on-surface leading-[1.1] tracking-tight">
+                        Healthcare Support, <br/>
+<span class="text-primary">When You Need It Most</span>
+</h1>
+<p class="text-on-surface-variant text-lg md:text-xl leading-relaxed max-w-2xl font-body">
+                        CareConnect bridges the gap between medical needs and compassionate volunteers. We provide the structural support and human touch necessary for a dignified healing journey.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="px-8 py-4 bg-primary text-on-primary rounded-lg font-headline font-bold text-base transition-all duration-300 hover:bg-primary-container shadow-md" href="code_form1.html">Request Support</a>
+<a class="px-8 py-4 border-2 border-outline-variant/30 text-primary rounded-lg font-headline font-bold text-base transition-all duration-300 hover:bg-surface-container-high" href="code_volunteer_desktop.html">Become a Volunteer</a>
+</div>
+</div>
+<!-- Hero Visual -->
+<div class="relative flex justify-center lg:justify-end">
+<div class="w-full max-w-xl aspect-square bg-gradient-to-tr from-primary/10 to-tertiary/10 rounded-3xl overflow-hidden shadow-2xl">
+<img alt="Healthcare Support" 
+     class="w-full h-full object-cover mix-blend-multiply opacity-90" 
+     data-alt="Modern medical professionals and caring volunteers in a bright, clean, minimalist architectural setting with soft teal color accents and warm natural lighting" 
+     loading="lazy"
+     src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfHpw62uD_Q_Du8MiOqxC0_RQzbNTiTc-Z2rVMMFRHEBXkDaabjaFdYdBFDCw0_mSFnGpDy8el7L9hqgeJk3nOHt3k0PM9MOccWV-dxZWZmHLCcYpaar5q6zU0IbQ7KbMNS0VvcxlNDpKAJtqchMQieJJ-50bw4q_H72GjMVlPrSZXtp6a0GFRn3aItVgfmAV_IO7xcKGrQ7Sr_Hd0bjZFI24MeBpZMvKuad4WK2wNsR8V7fzAEXksSGCLrdpRjhrfztE9C645IpGf"
+     srcset="https://lh3.googleusercontent.com/aida-public/AB6AXuBfHpw62uD_Q_Du8MiOqxC0_RQzbNTiTc-Z2rVMMFRHEBXkDaabjaFdYdBFDCw0_mSFnGpDy8el7L9hqgeJk3nOHt3k0PM9MOccWV-dxZWZmHLCcYpaar5q6zU0IbQ7KbMNS0VvcxlNDpKAJtqchMQieJJ-50bw4q_H72GjMVlPrSZXtp6a0GFRn3aItVgfmAV_IO7xcKGrQ7Sr_Hd0bjZFI24MeBpZMvKuad4WK2wNsR8V7fzAEXksSGCLrdpRjhrfztE9C645IpGf 1200w"
+     sizes="(max-width: 1024px) 100vw, 50vw"/>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute -bottom-6 -left-6 w-32 h-32 bg-tertiary-container rounded-2xl -z-10 opacity-20"></div>
+<div class="absolute -top-6 -right-6 w-48 h-48 bg-primary-container rounded-full -z-10 opacity-10 blur-2xl"></div>
+</div>
+</div>
+</section>
+<!-- Stats Bar -->
+<section class="bg-surface-container-low py-16">
+<div class="max-w-screen-2xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+<div class="space-y-2">
+<p class="text-4xl md:text-5xl font-headline font-extrabold text-primary">2,400+</p>
+<p class="text-on-surface-variant font-label tracking-wide uppercase text-xs font-semibold">Patients Helped</p>
+</div>
+<div class="space-y-2">
+<p class="text-4xl md:text-5xl font-headline font-extrabold text-primary">500+</p>
+<p class="text-on-surface-variant font-label tracking-wide uppercase text-xs font-semibold">Volunteers</p>
+</div>
+<div class="space-y-2">
+<p class="text-4xl md:text-5xl font-headline font-extrabold text-primary">30+</p>
+<p class="text-on-surface-variant font-label tracking-wide uppercase text-xs font-semibold">Cities</p>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works Section -->
+<section class="bg-surface py-24 md:py-32">
+<div class="max-w-screen-2xl mx-auto px-8">
+<div class="text-center mb-20 space-y-4">
+<h2 class="font-headline text-3xl md:text-4xl font-bold text-on-surface">Streamlined Care Process</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Our platform ensures that getting the support you need is seamless, secure, and focused on your well-being.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl shadow-[0_12px_32px_-4px_rgba(25,28,30,0.06)] border border-outline-variant/10 transition-transform duration-300 hover:-translate-y-2">
+<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 text-primary">
+<span class="material-symbols-outlined text-4xl" data-icon="description">description</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-4">Submit Request</h3>
+<p class="text-on-surface-variant leading-relaxed">Tell us about your needs or the needs of a loved one through our secure, HIPAA-compliant platform.</p>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl shadow-[0_12px_32px_-4px_rgba(25,28,30,0.06)] border border-outline-variant/10 transition-transform duration-300 hover:-translate-y-2">
+<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 text-primary">
+<span class="material-symbols-outlined text-4xl" data-icon="handshake">handshake</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-4">Get Matched</h3>
+<p class="text-on-surface-variant leading-relaxed">Our intelligent system pairs you with verified, compassionate volunteers in your local community.</p>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl shadow-[0_12px_32px_-4px_rgba(25,28,30,0.06)] border border-outline-variant/10 transition-transform duration-300 hover:-translate-y-2">
+<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 text-primary">
+<span class="material-symbols-outlined text-4xl" data-icon="volunteer_activism">volunteer_activism</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-4">Receive Care</h3>
+<p class="text-on-surface-variant leading-relaxed">Experience dedicated support, from medical appointments to daily assistance, provided with dignity.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Impact Highlight (Editorial Layout) -->
+<section class="py-24 bg-surface-container-low overflow-hidden">
+<div class="max-w-screen-2xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5 space-y-8">
+<span class="bg-tertiary-container text-on-tertiary-container px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest font-label">Our Impact</span>
+<h2 class="font-headline text-4xl md:text-5xl font-bold leading-tight">Beyond treatment, we provide community.</h2>
+<p class="text-lg text-on-surface-variant leading-relaxed">We believe that no one should navigate their health journey alone. By fostering local networks, we ensure that every patient feels seen and supported.</p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-medium">100% Background-checked Volunteers</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-medium">24/7 Support Coordination</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-medium">Free Access for All Patients</span>
+</li>
+</ul>
+</div>
+<div class="lg:col-span-7 grid grid-cols-2 gap-4">
+<div class="space-y-4 pt-12">
+<div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-lg">
+<img alt="Support Worker" class="w-full h-full object-cover" data-alt="A diverse healthcare volunteer smiling warmly while assisting an elderly person in a bright domestic setting with soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-qc4Az75SVVzy3ZUB4XBUYurjBY0kQoKpcsWPAfmJK3WbGq6iU1W-XlhpTnOMHmon4smc3g5G8SEqq6uCzqhL_OmEZHFgIwn7nYB18ClFrBLHrtG9Or9gFnHyOz1hHxbkNjJExaTED2jQL16CpXfH2uq0tuLuqXKlmXQsZib04zas1c0DN8ism6ah3guhLxAZQI24R7bt8UIM0wVgHzOIgr2KQ1Dde348-XE92HhVo4IR29PyeTdzIxSCnjIZkjZz_-GzoOGir9gJ"/>
+</div>
+</div>
+<div class="space-y-4">
+<div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-lg">
+<img alt="Community Care" class="w-full h-full object-cover" data-alt="Close up of two hands holding gently in a supportive gesture, soft focused background of a clean community center with warm sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBLdzeYOYHfK4EIgzDW0fy7fhkz2dNEQo_ZhaPcFu5ETPyJKF7OoIEXDYrHGXhX-n81FqePPF4Au7rqqQuqoK8krFGkHag1qXzdZiTW0nwRG9NE6m_02eErQY-k6ANlBcrwR7NtNDzKx1j-hdhZzHbX9SktaRgEJT7KCxggGVY-N-i6LaJ0XbvF7oVIeY_3bVd-XbqoRQeDtq1cg76CSNhCq_errjVZpfEV9-UIulf2N5-M_EZopSEep-xNJuLudIAWohdSQ0_8qqA"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 bg-primary relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl -mr-48 -mt-48"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-tertiary-fixed rounded-full blur-3xl -ml-48 -mb-48"></div>
+</div>
+<div class="max-w-4xl mx-auto text-center relative z-10 px-8">
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold text-on-primary mb-8">Ready to make a difference or need a helping hand?</h2>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<a class="px-10 py-5 bg-white text-primary rounded-xl font-headline font-extrabold text-lg hover:bg-surface-container-low transition-colors shadow-xl" href="code_form1.html">Start Here</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 px-8 mt-auto bg-slate-100 dark:bg-slate-950 font-inter text-sm leading-relaxed">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-screen-2xl mx-auto">
+<div class="col-span-1 md:col-span-1 space-y-6">
+<div class="text-xl font-bold text-slate-900 dark:text-slate-50 font-headline">
+                    CareConnect
+                </div>
+<p class="text-slate-500 dark:text-slate-400 max-w-xs">
+                    Human-centric care for everyone. Bridging communities through compassion and technology.
+                </p>
+</div>
+<div class="space-y-4">
+<h4 class="font-headline font-bold text-slate-900 dark:text-slate-50">Quick Links</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-300 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-300 transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-headline font-bold text-slate-900 dark:text-slate-50">Company</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-300 transition-colors" href="#">Accessibility</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-300 transition-colors" href="#">Global Impact</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-headline font-bold text-slate-900 dark:text-slate-50">Subscribe</h4>
+<div class="flex flex-col gap-4">
+<input class="bg-white dark:bg-slate-900 border-none rounded-lg p-3 text-sm focus:ring-2 focus:ring-teal-500" placeholder="Your email address" type="email"/>
+<button class="bg-primary text-on-primary py-3 rounded-lg font-bold">Join Community</button>
+</div>
+</div>
+</div>
+<div class="max-w-screen-2xl mx-auto px-8 mt-16 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-500 dark:text-slate-400">© 2025 CareConnect NGO. Human-centric care for everyone.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary transition-colors" data-icon="public">public</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary transition-colors" data-icon="volunteer_activism">volunteer_activism</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary transition-colors" data-icon="groups">groups</span>
+</div>
+</div>
+</footer>
+<script src="app.js" defer></script>
+</body></html>
