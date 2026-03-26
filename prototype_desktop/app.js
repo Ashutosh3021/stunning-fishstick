@@ -109,7 +109,26 @@ function generateBotReply(message) {
     return 'You can request support by filling out our patient support form on the home screen. Our team will review your request and get back to you as soon as possible.';
   }
 
-  return 'I can implement the API key here, but for demo purposes, I am not implementing it now, so chatting other than the below 👇 placeholder will not work.';
+  return null; // Signal to use Gemini API
+}
+
+async function getGeminiResponse(message) {
+  try {
+    const response = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message })
+    });
+    
+    const data = await response.json();
+    if (data.error) {
+      return `Error: ${data.error}`;
+    }
+    return data.reply;
+  } catch (error) {
+    console.error('Chat Error:', error);
+    return "I'm sorry, I'm having trouble connecting to my AI brain right now. Please try again later.";
+  }
 }
 
 function createChatBubble({ from, text }) {
@@ -324,7 +343,7 @@ function initDesktopChat() {
     chatHistory.scrollTop = chatHistory.scrollHeight;
   }
 
-  function send(text) {
+  async function send(text) {
     const t = String(text || '').trim();
     if (!t) return;
 
@@ -347,10 +366,15 @@ function initDesktopChat() {
     chatHistory.appendChild(typing);
     chatHistory.scrollTop = chatHistory.scrollHeight;
 
-    window.setTimeout(() => {
-      typing.remove();
-      appendMessage({ from: 'bot', text: generateBotReply(t) });
-    }, 500);
+    const botReply = generateBotReply(t);
+    let finalReply = botReply;
+
+    if (botReply === null) {
+      finalReply = await getGeminiResponse(t);
+    }
+
+    typing.remove();
+    appendMessage({ from: 'bot', text: finalReply });
   }
 
   chatSend.addEventListener('click', () => send(chatInput.value));

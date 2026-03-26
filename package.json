@@ -1,0 +1,26 @@
+{
+  "name": "careconnect-prototype",
+  "version": "1.0.0",
+  "homepage": "https://ashutosh3021.github.io/stunning-fishstick",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "prebuild": "shx rm -rf build && shx mkdir build",
+    "build": "shx cp -r index.html prototype_mobile prototype_desktop build/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "serve-build": "serve -s build"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.3.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1",
+    "serve": "^14.2.3",
+    "shx": "^0.3.4"
+  }
+}
+
